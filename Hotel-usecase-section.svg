@@ -1,0 +1,461 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1500" role="img" aria-labelledby="title desc">
+  <title id="title">Hotel use-case section (Memo visual system)</title>
+  <desc id="desc">A premium, stepped right-to-left card layout for hotel operations, aligned with Memo's dark technical background, signal accents, and card styling.</desc>
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#04060a"/>
+      <stop offset="55%" stop-color="#05080d"/>
+      <stop offset="100%" stop-color="#07101a"/>
+    </linearGradient>
+    <radialGradient id="blueGlow" cx="18%" cy="28%" r="70%">
+      <stop offset="0%" stop-color="#1fe1ff" stop-opacity="0.22"/>
+      <stop offset="42%" stop-color="#0d6f96" stop-opacity="0.11"/>
+      <stop offset="100%" stop-color="#0d6f96" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="amberGlow" cx="86%" cy="18%" r="60%">
+      <stop offset="0%" stop-color="#ff7a1a" stop-opacity="0.16"/>
+      <stop offset="44%" stop-color="#ff7a1a" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#ff7a1a" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="gridPattern" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#1b2836" stroke-width="1"/>
+    </pattern>
+    <pattern id="microPattern" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1" fill="#152535"/>
+    </pattern>
+    <linearGradient id="signalGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1fe1ff"/>
+      <stop offset="54%" stop-color="#7de6ff"/>
+      <stop offset="80%" stop-color="#ff8a2e"/>
+      <stop offset="100%" stop-color="#dfeeff"/>
+    </linearGradient>
+    <filter id="glowBlue" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0.58  0 0 1 0 0.72  0 0 0 1 0"/>
+    </filter>
+    <filter id="glowAmber" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0.22  0 1 0 0 0.09  0 0 1 0 0  0 0 0 1 0"/>
+    </filter>
+    <linearGradient id="cardFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a131d" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#080d14" stop-opacity="0.98"/>
+    </linearGradient>
+    <linearGradient id="cardStrokeCool" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#27455b"/>
+      <stop offset="100%" stop-color="#182736"/>
+    </linearGradient>
+    <linearGradient id="cardStrokeWarm" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5e3316"/>
+      <stop offset="100%" stop-color="#182736"/>
+    </linearGradient>
+    <radialGradient id="warmCyanEdgeMask" cx="100%" cy="100%" r="78%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="52%" stop-color="#ffffff" stop-opacity="0.92"/>
+      <stop offset="78%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="warmCyanEdgeReveal">
+      <rect width="640" height="240" fill="url(#warmCyanEdgeMask)"/>
+    </mask>
+    <radialGradient id="coolAmberEdgeMask" cx="100%" cy="100%" r="78%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="52%" stop-color="#ffffff" stop-opacity="0.92"/>
+      <stop offset="78%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="coolAmberEdgeReveal">
+      <rect width="640" height="240" fill="url(#coolAmberEdgeMask)"/>
+    </mask>
+    <style><![CDATA[
+      .treatment { shape-rendering: geometricPrecision; }
+      .ui { text-rendering: geometricPrecision; -webkit-font-smoothing: antialiased; }
+      .headline {
+        fill: #f4f7fb;
+        font-family: "Space Grotesk", "Avenir Next", "Helvetica Neue", sans-serif;
+        font-size: 42px;
+        font-weight: 600;
+        letter-spacing: -0.04em;
+      }
+      .card-title {
+        fill: #f7faff;
+        font-family: "Space Grotesk", "Avenir Next", "Helvetica Neue", sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: -0.03em;
+      }
+      .card-copy {
+        fill: #f7faff;
+        font-family: "Space Grotesk", "Avenir Next", "Helvetica Neue", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        opacity: 0.94;
+      }
+      .icon-stroke { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .hairline { fill: none; stroke: #15212f; stroke-width: 1; opacity: 0.9; }
+      .dash { fill: none; stroke-width: 1; stroke-linecap: round; stroke-dasharray: 3 12; opacity: 0.28; }
+    ]]></style>
+
+    <!-- Reusable Memo logo icon path (used by card icons) -->
+    <path
+      id="memoLogoIconPath"
+      fill="#FE6301"
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M 927.5 81.0 C 955.3 101.5 985.7 153.8 997.0 177.5 C 1008.3 201.2 1021.1 216.7 1024.0 284.5 C 1026.9 352.3 1031.5 683.5 1022.0 758.5 C 1012.5 833.5 963.5 899.7 943.0 927.5 C 922.5 955.3 870.2 985.7 846.5 997.0 C 822.8 1008.3 807.3 1021.1 739.5 1024.0 C 671.7 1026.9 330.8 1025.0 265.5 1022.0 C 200.2 1019.0 200.0 1008.0 179.5 998.0 C 159.0 988.0 107.3 953.7 89.5 936.0 C 71.7 918.3 37.4 869.5 27.0 846.5 C 16.6 823.5 2.9 806.3 0.0 738.5 C -2.9 670.7 -1.0 330.7 2.0 265.5 C 5.0 200.3 16.0 200.0 26.0 179.5 C 36.0 159.0 70.3 107.3 88.0 89.5 C 105.7 71.7 154.6 37.4 177.5 27.0 C 200.4 16.6 216.7 2.9 284.5 0.0 C 352.3 -2.9 683.5 -7.4 758.5 2.0 C 833.5 11.4 899.7 60.5 927.5 81.0 Z M 816.0 224.5 C 835.1 245.9 851.2 283.0 856.0 314.5 C 860.8 346.0 858.5 395.4 848.0 434.5 C 837.5 473.6 811.1 535.1 786.0 575.5 C 760.9 615.9 713.6 671.5 680.5 704.0 C 647.4 736.5 602.2 770.4 565.5 792.0 C 528.8 813.6 474.2 838.5 435.5 848.0 C 396.8 857.5 340.3 860.8 307.5 855.0 C 274.7 849.2 237.8 830.3 217.0 809.5 C 196.2 788.7 175.2 749.6 169.0 716.5 C 162.8 683.4 165.7 628.7 176.0 588.5 C 186.3 548.3 212.9 488.8 238.0 448.5 C 263.1 408.2 308.3 353.7 343.5 320.0 C 378.7 286.3 432.9 246.2 472.5 224.0 C 512.1 201.8 569.1 179.8 607.5 172.0 C 645.9 164.2 697.2 164.1 728.5 172.0 C 759.8 179.9 796.9 203.1 816.0 224.5 Z"
+    />
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="1500" fill="url(#bgGradient)"/>
+  <rect width="1600" height="1500" fill="url(#blueGlow)"/>
+  <rect width="1600" height="1500" fill="url(#amberGlow)"/>
+  <rect width="1600" height="1500" fill="url(#gridPattern)" opacity="0.14"/>
+  <rect width="1600" height="1500" fill="url(#microPattern)" opacity="0.08"/>
+
+  <!-- Header -->
+  <g class="ui">
+    <text class="headline" x="800" y="150" text-anchor="middle">
+      <tspan x="800" dy="0">Where Memo drives clarity across hotel operations</tspan>
+    </text>
+  </g>
+
+  <!-- Subtle container guides -->
+  <g class="treatment" opacity="0.82">
+    <path class="hairline" d="M160 210 H1440"/>
+    <path class="hairline" d="M160 1286 H1440"/>
+    <path class="hairline" d="M800 250 V1310" opacity="0.55"/>
+    <path class="hairline" d="M320 250 H1280" opacity="0.55"/>
+    <path class="hairline" d="M320 1030 H1280" opacity="0.42"/>
+  </g>
+
+  <!-- Mirrored signal path behind cards -->
+  <g class="treatment">
+    <path d="M1180 345
+             C1168 438 1148 486 1120 551
+             S1080 694 1060 757
+             S820 892 540 963
+             S460 1094 480 1169
+             S440 1304 420 1375"
+          fill="none" stroke="#0b2231" stroke-width="3" stroke-linecap="round" opacity="0.92"/>
+    <path d="M1180 345
+             C1168 438 1148 486 1120 551
+             S1080 694 1060 757
+             S820 892 540 963
+             S460 1094 480 1169
+             S440 1304 420 1375"
+          fill="none" stroke="url(#signalGradient)" stroke-width="10" stroke-linecap="round"
+          opacity="0.14" filter="url(#glowBlue)"/>
+    <path d="M1180 345
+             C1168 438 1148 486 1120 551
+             S1080 694 1060 757
+             S820 892 540 963
+             S460 1094 480 1169
+             S440 1304 420 1375"
+          fill="none" stroke="url(#signalGradient)" stroke-width="6" stroke-linecap="round"
+          opacity="0.22"/>
+
+    <!-- Dashed echoes -->
+    <path class="dash" d="M1148 380 C1136 440 1108 490 1096 545 S1040 690 1060 760 S860 880 560 950 S470 1120 500 1180 S460 1320 430 1380"
+          stroke="#7de6ff"/>
+    <path class="dash" d="M1196 320 C1180 420 1160 475 1130 545 S1090 680 1068 760 S800 860 520 970 S470 1090 450 1160 S410 1295 405 1370"
+          stroke="#ff8a2e"/>
+  </g>
+
+  <!-- Nodes (six anchors aligned to cards) -->
+  <g class="treatment" opacity="0.95">
+    <g transform="translate(0 0)">
+      <circle cx="1180" cy="345" r="6" fill="#1fe1ff"/>
+      <circle cx="1180" cy="345" r="18" fill="none" stroke="#1fe1ff" stroke-opacity="0.18"/>
+    </g>
+    <g transform="translate(0 0)">
+      <circle cx="1120" cy="551" r="6" fill="#ff8a2e"/>
+      <circle cx="1120" cy="551" r="18" fill="none" stroke="#ff8a2e" stroke-opacity="0.14" filter="url(#glowAmber)"/>
+    </g>
+    <g transform="translate(0 0)">
+      <circle cx="1060" cy="757" r="6" fill="#7de6ff"/>
+      <circle cx="1060" cy="757" r="18" fill="none" stroke="#7de6ff" stroke-opacity="0.2"/>
+    </g>
+    <g transform="translate(0 0)">
+      <circle cx="540" cy="963" r="6" fill="#dfeeff"/>
+      <circle cx="540" cy="963" r="18" fill="none" stroke="#7de6ff" stroke-opacity="0.14"/>
+    </g>
+    <g transform="translate(0 0)">
+      <circle cx="480" cy="1169" r="6" fill="#ff8a2e"/>
+      <circle cx="480" cy="1169" r="18" fill="none" stroke="#ff8a2e" stroke-opacity="0.12" filter="url(#glowAmber)"/>
+    </g>
+    <g transform="translate(0 0)">
+      <circle cx="420" cy="1375" r="6" fill="#7de6ff"/>
+      <circle cx="420" cy="1375" r="18" fill="none" stroke="#7de6ff" stroke-opacity="0.18"/>
+    </g>
+  </g>
+
+  <!-- Foreground stepped cards -->
+  <g class="ui">
+    <!-- Card 1 (right, shortest) -->
+    <g transform="translate(912.5 885)">
+      <rect width="605" height="190" rx="28" fill="none" stroke="#ff7a1a" stroke-opacity="0.26" stroke-width="7"
+            filter="url(#glowAmber)" mask="url(#coolAmberEdgeReveal)"/>
+      <rect width="605" height="190" rx="28" fill="url(#cardFill)" stroke="url(#cardStrokeCool)" stroke-width="1.4"/>
+      <rect x="10" y="10" width="585" height="170" rx="20" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+      <path d="M30 28 H112" fill="none" stroke="#7de6ff" stroke-width="2" stroke-linecap="round" opacity="0.95"/>
+
+      <g transform="translate(30 44)">
+        <rect width="44" height="44" rx="16" fill="#0d1722" stroke="#27455b"/>
+        <g transform="translate(8 7)" display="none">
+          <!-- Alert bubble -->
+          <path class="icon-stroke" d="M14 8
+                                       C20 8 24 12 24 18
+                                       C24 24 20 28 14 28
+                                       H11
+                                       L7 31
+                                       L7 28
+                                       H14
+                                       C8 28 4 24 4 18
+                                       C4 12 8 8 14 8 Z"
+                stroke="#ff8a2e" stroke-width="1.8"/>
+          <!-- Timeline -->
+          <path class="icon-stroke" d="M3 22 H25" stroke="#7de6ff" stroke-width="1.6"/>
+          <path class="icon-stroke" d="M7 18 V22" stroke="#7de6ff" stroke-width="1.6"/>
+          <path class="icon-stroke" d="M14 16 V22" stroke="#7de6ff" stroke-width="1.6"/>
+          <path class="icon-stroke" d="M21 18 V22" stroke="#7de6ff" stroke-width="1.6"/>
+          <!-- Magnifier -->
+          <circle cx="20" cy="14" r="5.4" stroke="#7de6ff" stroke-width="1.7" fill="none"/>
+          <path class="icon-stroke" d="M24.5 18.5 L30 24" stroke="#7de6ff" stroke-width="1.9"/>
+          <!-- Radio/chat wave -->
+          <path class="icon-stroke" d="M9 32 C12 29 16 29 19 32" stroke="#dfeeff" stroke-width="1.5" opacity="0.9"/>
+          <path class="icon-stroke" d="M6 35 C10 31 18 31 22 35" stroke="#dfeeff" stroke-width="1.4" opacity="0.65"/>
+        </g>
+        <g transform="translate(5 5) scale(0.033203125)">
+          <use href="#memoLogoIconPath" />
+        </g>
+      </g>
+
+      <text class="card-title" x="92" y="64">
+        <tspan x="92" dy="0">Reconstruct guest issues</tspan>
+        <tspan x="92" dy="24">with clarity</tspan>
+      </text>
+      <text class="card-copy" x="92" y="118">
+        <tspan x="92" dy="0">When a complaint or service failure escalates, Memo helps leaders</tspan>
+        <tspan x="92" dy="20">review when the issue was first called out, how it was handed off,</tspan>
+        <tspan x="92" dy="20">who responded, and where execution broke down.</tspan>
+      </text>
+    </g>
+
+    <!-- Card 2 (upper-right, medium) -->
+    <g transform="translate(910.5 595)">
+      <rect width="605" height="190" rx="28" fill="none" stroke="#1fe1ff" stroke-opacity="0.28" stroke-width="7"
+            filter="url(#glowBlue)" mask="url(#warmCyanEdgeReveal)"/>
+      <rect width="605" height="190" rx="28" fill="url(#cardFill)" stroke="url(#cardStrokeWarm)" stroke-width="1.4"/>
+      <rect x="10" y="10" width="585" height="170" rx="20" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+      <path d="M30 28 H132" fill="none" stroke="#ff8a2e" stroke-width="2" stroke-linecap="round" opacity="0.95"/>
+
+      <g transform="translate(30 44)">
+        <rect width="44" height="44" rx="16" fill="#160f0a" stroke="#5e3316"/>
+        <g transform="translate(8 8)" display="none">
+          <!-- Bed -->
+          <path class="icon-stroke" d="M4 20 V13 C4 11 6 9 8 9 H22 C24 9 26 11 26 13 V20" stroke="#7de6ff" stroke-width="1.7"/>
+          <path class="icon-stroke" d="M6 20 H24" stroke="#7de6ff" stroke-width="1.7"/>
+          <path class="icon-stroke" d="M9 15 H17" stroke="#2b4357" stroke-width="1.4" opacity="0.95"/>
+          <path class="icon-stroke" d="M8 23 V26" stroke="#7de6ff" stroke-width="1.5"/>
+          <path class="icon-stroke" d="M21 23 V26" stroke="#7de6ff" stroke-width="1.5"/>
+          <!-- Door hanger -->
+          <rect x="24" y="6" width="10" height="26" rx="4" fill="none" stroke="#ff8a2e" stroke-width="1.8"/>
+          <circle cx="29" cy="19" r="2" fill="#ff8a2e"/>
+          <!-- Checkmark -->
+          <path class="icon-stroke" d="M12 26 L15.5 30.2 L23 22.8" stroke="#ff8a2e" stroke-width="2.0"/>
+          <!-- Signal lines -->
+          <path class="icon-stroke" d="M2 30 C6 27 10 27 14 30" stroke="#dfeeff" stroke-width="1.45" opacity="0.85"/>
+          <path class="icon-stroke" d="M2 34 C7 30 11 30 16 34" stroke="#dfeeff" stroke-width="1.3" opacity="0.6"/>
+        </g>
+        <g transform="translate(5 5) scale(0.033203125)">
+          <use href="#memoLogoIconPath" />
+        </g>
+      </g>
+
+      <text class="card-title" x="110" y="64">
+        <tspan x="110" dy="0">Improve room-readiness</tspan>
+        <tspan x="110" dy="24">coordination</tspan>
+      </text>
+      <text class="card-copy" x="110" y="118">
+        <tspan x="110" dy="0">Memo gives visibility into the radio communication behind room turns,</tspan>
+        <tspan x="110" dy="20">rush cleans, inspected status, maintenance holds, and arrival</tspan>
+        <tspan x="110" dy="20">preparation so teams can spot where delays begin.</tspan>
+      </text>
+    </g>
+
+    <!-- Card 3 (top, longest) -->
+    <g transform="translate(482.5 305)">
+      <rect width="605" height="190" rx="28" fill="none" stroke="#1fe1ff" stroke-opacity="0.28" stroke-width="7"
+            filter="url(#glowBlue)" mask="url(#warmCyanEdgeReveal)"/>
+      <rect width="605" height="190" rx="28" fill="url(#cardFill)" stroke="url(#cardStrokeWarm)" stroke-width="1.4"/>
+      <rect x="10" y="10" width="585" height="170" rx="20" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+      <path d="M30 28 H154" fill="none" stroke="#ff8a2e" stroke-width="2" stroke-linecap="round" opacity="0.95"/>
+
+      <g transform="translate(30 44)">
+        <rect width="44" height="44" rx="16" fill="#0d1722" stroke="#27455b"/>
+        <image x="5" y="5" width="34" height="34" preserveAspectRatio="xMidYMid meet" display="none"
+               href="data:image/jpeg;base64,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"/>
+        <g transform="translate(5 5) scale(0.033203125)">
+          <path
+            fill="#FE6301"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M 927.5 81.0 C 955.3 101.5 985.7 153.8 997.0 177.5 C 1008.3 201.2 1021.1 216.7 1024.0 284.5 C 1026.9 352.3 1031.5 683.5 1022.0 758.5 C 1012.5 833.5 963.5 899.7 943.0 927.5 C 922.5 955.3 870.2 985.7 846.5 997.0 C 822.8 1008.3 807.3 1021.1 739.5 1024.0 C 671.7 1026.9 330.8 1025.0 265.5 1022.0 C 200.2 1019.0 200.0 1008.0 179.5 998.0 C 159.0 988.0 107.3 953.7 89.5 936.0 C 71.7 918.3 37.4 869.5 27.0 846.5 C 16.6 823.5 2.9 806.3 0.0 738.5 C -2.9 670.7 -1.0 330.7 2.0 265.5 C 5.0 200.3 16.0 200.0 26.0 179.5 C 36.0 159.0 70.3 107.3 88.0 89.5 C 105.7 71.7 154.6 37.4 177.5 27.0 C 200.4 16.6 216.7 2.9 284.5 0.0 C 352.3 -2.9 683.5 -7.4 758.5 2.0 C 833.5 11.4 899.7 60.5 927.5 81.0 Z M 816.0 224.5 C 835.1 245.9 851.2 283.0 856.0 314.5 C 860.8 346.0 858.5 395.4 848.0 434.5 C 837.5 473.6 811.1 535.1 786.0 575.5 C 760.9 615.9 713.6 671.5 680.5 704.0 C 647.4 736.5 602.2 770.4 565.5 792.0 C 528.8 813.6 474.2 838.5 435.5 848.0 C 396.8 857.5 340.3 860.8 307.5 855.0 C 274.7 849.2 237.8 830.3 217.0 809.5 C 196.2 788.7 175.2 749.6 169.0 716.5 C 162.8 683.4 165.7 628.7 176.0 588.5 C 186.3 548.3 212.9 488.8 238.0 448.5 C 263.1 408.2 308.3 353.7 343.5 320.0 C 378.7 286.3 432.9 246.2 472.5 224.0 C 512.1 201.8 569.1 179.8 607.5 172.0 C 645.9 164.2 697.2 164.1 728.5 172.0 C 759.8 179.9 796.9 203.1 816.0 224.5 Z"
+          />
+        </g>
+      </g>
+
+      <text class="card-title" x="118" y="64">
+        <tspan x="118" dy="0">Surface maintenance response</tspan>
+        <tspan x="118" dy="24">bottlenecks</tspan>
+      </text>
+      <text class="card-copy" x="118" y="118">
+        <tspan x="118" dy="0">Track how engineering issues are reported, routed, and escalated across</tspan>
+        <tspan x="118" dy="20">teams to identify slow responses, repeated handoff failures, and</tspan>
+        <tspan x="118" dy="20">recurring property problems.</tspan>
+      </text>
+    </g>
+
+    <!-- Card 4 (bottom, longest) -->
+    <g transform="translate(482.5 1205)">
+      <rect width="605" height="190" rx="28" fill="none" stroke="#ff7a1a" stroke-opacity="0.26" stroke-width="7"
+            filter="url(#glowAmber)" mask="url(#coolAmberEdgeReveal)"/>
+      <rect width="605" height="190" rx="28" fill="url(#cardFill)" stroke="url(#cardStrokeCool)" stroke-width="1.4"/>
+      <rect x="10" y="10" width="585" height="170" rx="20" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+      <path d="M30 28 H154" fill="none" stroke="#1fe1ff" stroke-width="2" stroke-linecap="round" opacity="0.95"/>
+
+      <g transform="translate(30 44)">
+        <rect width="44" height="44" rx="16" fill="#0d1722" stroke="#27455b"/>
+        <g transform="translate(8 7)" display="none">
+          <!-- Stacked shift bars -->
+          <rect x="3" y="16" width="18" height="4" rx="2" fill="none" stroke="#7de6ff" stroke-width="1.6"/>
+          <rect x="3" y="22" width="18" height="4" rx="2" fill="none" stroke="#7de6ff" stroke-width="1.6" opacity="0.9"/>
+          <rect x="3" y="28" width="18" height="4" rx="2" fill="none" stroke="#7de6ff" stroke-width="1.6" opacity="0.75"/>
+
+          <!-- Repeating arrows -->
+          <path class="icon-stroke" d="M23 18 H30 L27 15 M30 18 L27 21" stroke="#dfeeff" stroke-width="1.7"/>
+          <path class="icon-stroke" d="M21 26 H30 L27 23 M30 26 L27 29" stroke="#ff8a2e" stroke-width="1.9" opacity="0.95"/>
+
+          <!-- Trend line + warning marker -->
+          <path class="icon-stroke" d="M6 12 L14 18 L22 8 L28 12" stroke="#ff8a2e" stroke-width="2.0" opacity="0.95"/>
+          <path class="icon-stroke" d="M28 10 L33 16 H23 Z" stroke="#ff8a2e" stroke-width="1.8" fill="none"/>
+          <path class="icon-stroke" d="M28.2 13 V13.8" stroke="#ff8a2e" stroke-width="2.1"/>
+        </g>
+        <g transform="translate(5 5) scale(0.033203125)">
+          <use href="#memoLogoIconPath" />
+        </g>
+      </g>
+
+      <text class="card-title" x="92" y="64">
+        <tspan x="92" dy="0">Detect repeat operational</tspan>
+        <tspan x="92" dy="24">breakdowns across shifts</tspan>
+      </text>
+      <text class="card-copy" x="92" y="118">
+        <tspan x="92" dy="0">Memo helps hotel leaders identify recurring issue types, repeated</tspan>
+        <tspan x="92" dy="20">requests, and persistent coordination gaps that would otherwise stay</tspan>
+        <tspan x="92" dy="20">buried in day-to-day radio traffic.</tspan>
+      </text>
+    </g>
+
+    <!-- Card 5 (upper-left, medium) -->
+    <g transform="translate(62.5 595)">
+      <rect width="605" height="190" rx="28" fill="none" stroke="#1fe1ff" stroke-opacity="0.28" stroke-width="7"
+            filter="url(#glowBlue)" mask="url(#warmCyanEdgeReveal)"/>
+      <rect width="605" height="190" rx="28" fill="url(#cardFill)" stroke="url(#cardStrokeWarm)" stroke-width="1.4"/>
+      <rect x="10" y="10" width="585" height="170" rx="20" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+      <path d="M30 28 H132" fill="none" stroke="#ff8a2e" stroke-width="2" stroke-linecap="round" opacity="0.95"/>
+
+      <g transform="translate(30 44)">
+        <rect width="44" height="44" rx="16" fill="#160f0a" stroke="#5e3316"/>
+        <g transform="translate(8 7)" display="none">
+          <!-- Star -->
+          <path class="icon-stroke" d="M16 3.5 L18.2 8.2 L23.2 8.8 L19.4 12.1 L20.5 17.1 L16 14.6 L11.5 17.1 L12.6 12.1 L8.8 8.8 L13.8 8.2 Z"
+                stroke="#ff8a2e" stroke-width="1.6" fill="none"/>
+
+          <!-- Bell -->
+          <path class="icon-stroke" d="M10 12 C10 7 20 7 20 12 V20 C20 22 18.7 23.5 16 23.5 C13.3 23.5 12 22 12 20 V12"
+                stroke="#7de6ff" stroke-width="1.7"/>
+          <path class="icon-stroke" d="M13 22.8 H19" stroke="#7de6ff" stroke-width="1.7"/>
+          <path class="icon-stroke" d="M15.2 25.5 C15.6 24.8 16.4 24.8 16.8 25.5" stroke="#ff8a2e" stroke-width="2.1"/>
+
+          <!-- Signal lines -->
+          <path class="icon-stroke" d="M4 16 C6 14 8 14 10 16" stroke="#dfeeff" stroke-width="1.5" opacity="0.85"/>
+          <path class="icon-stroke" d="M22 16 C24 14 26 14 28 16" stroke="#dfeeff" stroke-width="1.5" opacity="0.85"/>
+          <path class="icon-stroke" d="M6 19.5 C9 17.2 11.5 17.2 14 19.5" stroke="#dfeeff" stroke-width="1.3" opacity="0.6"/>
+          <path class="icon-stroke" d="M20 19.5 C22.5 17.2 25 17.2 28 19.5" stroke="#dfeeff" stroke-width="1.3" opacity="0.6"/>
+
+          <!-- VIP tag -->
+          <path class="icon-stroke" d="M21 26 L28 19" stroke="#ff8a2e" stroke-width="2.0"/>
+          <rect x="21.6" y="24.2" width="9.5" height="6.4" rx="2.2" fill="none" stroke="#ff8a2e" stroke-width="1.6"/>
+          <path class="icon-stroke" d="M24.0 27.1 H27.6" stroke="#ff8a2e" stroke-width="1.8"/>
+        </g>
+        <g transform="translate(5 5) scale(0.033203125)">
+          <use href="#memoLogoIconPath" />
+        </g>
+      </g>
+
+      <text class="card-title" x="110" y="64">
+        <tspan x="110" dy="0">Strengthen VIP and high-touch</tspan>
+        <tspan x="110" dy="24">service execution</tspan>
+      </text>
+      <text class="card-copy" x="110" y="118">
+        <tspan x="110" dy="0">From arrivals to special requests to amenity delivery, Memo gives teams</tspan>
+        <tspan x="110" dy="20">better visibility into the communication behind high-touch guest</tspan>
+        <tspan x="110" dy="20">experiences where consistency matters most.</tspan>
+      </text>
+    </g>
+
+    <!-- Card 6 (left, shortest) -->
+    <g transform="translate(62.5 885)">
+      <rect width="605" height="190" rx="28" fill="none" stroke="#ff7a1a" stroke-opacity="0.26" stroke-width="7"
+            filter="url(#glowAmber)" mask="url(#coolAmberEdgeReveal)"/>
+      <rect width="605" height="190" rx="28" fill="url(#cardFill)" stroke="url(#cardStrokeCool)" stroke-width="1.4"/>
+      <rect x="10" y="10" width="585" height="170" rx="20" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+      <path d="M30 28 H112" fill="none" stroke="#7de6ff" stroke-width="2" stroke-linecap="round" opacity="0.95"/>
+
+      <g transform="translate(30 44)">
+        <rect width="44" height="44" rx="16" fill="#0d1722" stroke="#27455b"/>
+        <g transform="translate(8 7)" display="none">
+          <!-- Shield -->
+          <path class="icon-stroke" d="M13 3.5
+                                       L25 7
+                                       V16.8
+                                       C25 23 21 28.8 19 30.2
+                                       C17 28.8 13 23 13 16.8
+                                       V7 Z"
+                stroke="#7de6ff" stroke-width="1.8" fill="none"/>
+          <!-- Timeline inside shield -->
+          <path class="icon-stroke" d="M15 15.5 H23" stroke="#dfeeff" stroke-width="1.6"/>
+          <circle cx="15.4" cy="15.5" r="1.2" fill="#1fe1ff" opacity="0.95"/>
+          <circle cx="22.6" cy="15.5" r="1.2" fill="#ff8a2e" opacity="0.95"/>
+          <path class="icon-stroke" d="M16.3 12.5 H21.7" stroke="#2b4357" stroke-width="1.3" opacity="0.95"/>
+
+          <!-- Incident triangle -->
+          <path class="icon-stroke" d="M23 22.5 L30.6 34.6 H15.4 Z" stroke="#ff8a2e" stroke-width="1.9" fill="none"/>
+          <path class="icon-stroke" d="M24.7 28.1 V29.1" stroke="#ff8a2e" stroke-width="2.2"/>
+          <path class="icon-stroke" d="M24.7 31.0 V31.2" stroke="#ff8a2e" stroke-width="3.2"/>
+
+          <!-- Radio wave -->
+          <path class="icon-stroke" d="M3 26.5 C6 23.8 10 23.8 13 26.5" stroke="#dfeeff" stroke-width="1.5" opacity="0.85"/>
+          <path class="icon-stroke" d="M2 30.5 C6 27.0 11 27.0 14 30.5" stroke="#dfeeff" stroke-width="1.3" opacity="0.6"/>
+        </g>
+        <g transform="translate(5 5) scale(0.033203125)">
+          <use href="#memoLogoIconPath" />
+        </g>
+      </g>
+
+      <text class="card-title" x="92" y="64">
+        <tspan x="92" dy="0">Review security and</tspan>
+        <tspan x="92" dy="24">incident communication</tspan>
+      </text>
+      <text class="card-copy" x="92" y="118">
+        <tspan x="92" dy="0">Create a clearer record of how disturbances, access issues, medical</tspan>
+        <tspan x="92" dy="20">situations, and other on-property incidents were communicated and</tspan>
+        <tspan x="92" dy="20">escalated across teams.</tspan>
+      </text>
+    </g>
+  </g>
+</svg>
+

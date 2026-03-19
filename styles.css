@@ -328,7 +328,7 @@ h1 .emphasis {
   align-items: center;
   width: 100%;
   max-width: none;
-  margin-top: 170px;
+  margin-top: 145px;
 }
 
 .hero-proofs .proof-chip:nth-child(1) {
@@ -343,7 +343,8 @@ h1 .emphasis {
 
 .hero-proofs .proof-chip:nth-child(3) {
   justify-self: start;
-  margin-left: 318px;
+  /* Keep spacing symmetric relative to chip #2 (which is nudged left). */
+  margin-left: 180px;
 }
 
 @media (max-width: 1060px) {
@@ -366,7 +367,7 @@ h1 .emphasis {
   }
 
   .hero-proofs {
-    margin-top: 110px;
+    margin-top: 85px;
   }
 
   .hero-proofs .proof-chip:nth-child(1) {
@@ -374,7 +375,8 @@ h1 .emphasis {
   }
 
   .hero-proofs .proof-chip:nth-child(3) {
-    margin-left: 180px;
+    /* Matches chip #1 offset (with the chip #2 translateX(-5px) compensation). */
+    margin-left: 85px;
   }
 }
 
@@ -423,7 +425,7 @@ h1 .emphasis {
     column-gap: 0;
     overflow-x: auto;
     justify-items: stretch;
-    margin-top: 86px;
+    margin-top: 61px;
     grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   }
 
@@ -436,7 +438,8 @@ h1 .emphasis {
   }
 
   .hero-proofs .proof-chip:nth-child(3) {
-    margin-left: 266px;
+    /* Matches chip #1 offset (with the chip #2 translateX(-5px) compensation). */
+    margin-left: 128px;
   }
 }
 
