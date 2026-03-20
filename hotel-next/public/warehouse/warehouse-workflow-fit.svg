@@ -1,0 +1,556 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 940" role="img" aria-labelledby="title desc">
+  <title id="title">Memo works inside the communication your teams already rely on</title>
+  <desc id="desc">Circular workflow diagram for warehouse and logistics: live radio coordination, captured moments, visible patterns, and leader clarity in Memo's dark branded design system.</desc>
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#04060a"/>
+      <stop offset="55%" stop-color="#05080d"/>
+      <stop offset="100%" stop-color="#07101a"/>
+    </linearGradient>
+    <radialGradient id="blueGlow" cx="18%" cy="28%" r="70%">
+      <stop offset="0%" stop-color="#1fe1ff" stop-opacity="0.22"/>
+      <stop offset="42%" stop-color="#0d6f96" stop-opacity="0.11"/>
+      <stop offset="100%" stop-color="#0d6f96" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="amberGlow" cx="86%" cy="18%" r="60%">
+      <stop offset="0%" stop-color="#ff7a1a" stop-opacity="0.16"/>
+      <stop offset="44%" stop-color="#ff7a1a" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#ff7a1a" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="gridPattern" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#1b2836" stroke-width="1"/>
+    </pattern>
+    <pattern id="microPattern" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1" fill="#152535"/>
+    </pattern>
+    <linearGradient id="signalGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1fe1ff"/>
+      <stop offset="54%" stop-color="#7de6ff"/>
+      <stop offset="80%" stop-color="#ff8a2e"/>
+      <stop offset="100%" stop-color="#dfeeff"/>
+    </linearGradient>
+    <linearGradient id="signalGradientReverse" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#1fe1ff"/>
+      <stop offset="54%" stop-color="#7de6ff"/>
+      <stop offset="80%" stop-color="#ff8a2e"/>
+      <stop offset="100%" stop-color="#dfeeff"/>
+    </linearGradient>
+    <radialGradient id="stageAuraCool" cx="35%" cy="28%" r="74%">
+      <stop offset="0%" stop-color="#1fe1ff" stop-opacity="0.17"/>
+      <stop offset="48%" stop-color="#0f4057" stop-opacity="0.09"/>
+      <stop offset="100%" stop-color="#0f4057" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="stageAuraWarm" cx="70%" cy="22%" r="74%">
+      <stop offset="0%" stop-color="#ff7a1a" stop-opacity="0.15"/>
+      <stop offset="46%" stop-color="#5b2c0d" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#5b2c0d" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="stageFill" cx="34%" cy="26%" r="80%">
+      <stop offset="0%" stop-color="#0e1823"/>
+      <stop offset="48%" stop-color="#0a141e"/>
+      <stop offset="100%" stop-color="#081019"/>
+    </radialGradient>
+    <radialGradient id="stageShine" cx="26%" cy="16%" r="72%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="42%" stop-color="#7de6ff" stop-opacity="0.035"/>
+      <stop offset="100%" stop-color="#7de6ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ringCool" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#28495f"/>
+      <stop offset="50%" stop-color="#1b2c3c"/>
+      <stop offset="100%" stop-color="#101a25"/>
+    </linearGradient>
+    <linearGradient id="ringWarm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5f3417"/>
+      <stop offset="55%" stop-color="#2a1b13"/>
+      <stop offset="100%" stop-color="#111a24"/>
+    </linearGradient>
+    <linearGradient id="chipCool" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1722"/>
+      <stop offset="100%" stop-color="#0a1119"/>
+    </linearGradient>
+    <linearGradient id="chipWarm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15100c"/>
+      <stop offset="100%" stop-color="#0d1118"/>
+    </linearGradient>
+    <filter id="glowBlue" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0.58  0 0 1 0 0.72  0 0 0 1 0"/>
+    </filter>
+    <filter id="glowAmber" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0.22  0 1 0 0 0.09  0 0 1 0 0  0 0 0 1 0"/>
+    </filter>
+    <style><![CDATA[
+      .treatment { shape-rendering: geometricPrecision; }
+      .ui {
+        text-rendering: geometricPrecision;
+        -webkit-font-smoothing: antialiased;
+      }
+      .headline {
+        fill: #f4f7fb;
+        font-family: "Space Grotesk", "Avenir Next", "Helvetica Neue", sans-serif;
+        font-size: 42px;
+        font-weight: 600;
+        letter-spacing: -0.04em;
+      }
+      .stage-title {
+        fill: #f7faff;
+        font-family: "Space Grotesk", "Avenir Next", "Helvetica Neue", sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: -0.03em;
+      }
+      .stage-copy {
+        fill: rgba(247, 250, 255, 0.9);
+        font-family: "Space Grotesk", "Avenir Next", "Helvetica Neue", sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 0.005em;
+      }
+      .role-text,
+      .chip-text,
+      .mini-label,
+      .badge-text {
+        fill: #f7faff;
+        font-family: "Space Grotesk", "Avenir Next", "Helvetica Neue", sans-serif;
+      }
+      .role-text,
+      .chip-text,
+      .mini-label {
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge-text {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+      }
+      .soft-label {
+        fill: rgba(223, 238, 255, 0.7);
+        font-family: "Space Grotesk", "Avenir Next", "Helvetica Neue", sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .icon-stroke {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .hairline {
+        fill: none;
+        stroke: #15212f;
+        stroke-width: 1;
+        opacity: 0.9;
+      }
+      .dash-flow {
+        fill: none;
+        stroke-linecap: round;
+        stroke-dasharray: 4 16;
+        animation: dashFlow 18s linear infinite;
+      }
+      .dash-flow-slow {
+        fill: none;
+        stroke-linecap: round;
+        stroke-dasharray: 1 44;
+        animation: dashFlow 22s linear infinite reverse;
+      }
+      .pulse {
+        animation: breathe 6s ease-in-out infinite;
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+      .pulse-slow {
+        animation: breathe 8s ease-in-out infinite;
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+      .halo-pulse {
+        animation: haloPulse 9s ease-in-out infinite;
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+      .shimmer {
+        animation: shimmer 7s ease-in-out infinite;
+      }
+      @keyframes dashFlow {
+        to { stroke-dashoffset: -280; }
+      }
+      @keyframes breathe {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 1; }
+      }
+      @keyframes haloPulse {
+        0%, 100% { opacity: 0.18; transform: scale(1); }
+        50% { opacity: 0.34; transform: scale(1.03); }
+      }
+      @keyframes shimmer {
+        0%, 100% { opacity: 0.12; }
+        50% { opacity: 0.3; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .dash-flow,
+        .dash-flow-slow,
+        .pulse,
+        .pulse-slow,
+        .halo-pulse,
+        .shimmer {
+          animation: none !important;
+        }
+      }
+    ]]></style>
+  </defs>
+
+  <rect width="1600" height="940" fill="url(#bgGradient)"/>
+  <rect width="1600" height="940" fill="url(#blueGlow)"/>
+  <rect width="1600" height="940" fill="url(#amberGlow)"/>
+  <rect width="1600" height="940" fill="url(#gridPattern)" opacity="0.14"/>
+  <rect width="1600" height="940" fill="url(#microPattern)" opacity="0.08"/>
+
+  <g class="treatment" opacity="0.82">
+    <path class="hairline" d="M120 196 H1480"/>
+    <path class="hairline" d="M120 818 H1480"/>
+    <path class="hairline" d="M800 214 V812" opacity="0.46"/>
+    <path class="hairline" d="M250 582 H1295" opacity="0.34"/>
+  </g>
+
+  <g class="treatment" opacity="0.26">
+    <path d="M215 778 H355" fill="none" stroke="#7de6ff" stroke-width="2" stroke-linecap="round"/>
+    <path d="M1163 778 H1303" fill="none" stroke="#ff8a2e" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <g class="ui">
+    <path d="M772 88 H828" fill="none" stroke="#ff7a1a" stroke-width="2" stroke-linecap="round"/>
+    <text class="headline" x="800" y="142" text-anchor="middle">
+      <tspan x="800" dy="0">Memo works inside the communication</tspan>
+      <tspan x="800" dy="50">your teams already rely on</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(28 0)">
+  <g class="treatment">
+    <path d="M250 392
+             C340 270 505 270 595 392
+             C695 516 835 516 950 392
+             C1025 270 1175 270 1295 392"
+          fill="none" stroke="#0b2231" stroke-width="28" stroke-linecap="round" opacity="0.94"/>
+    <path d="M250 392
+             C340 270 505 270 595 392
+             C695 516 835 516 950 392
+             C1025 270 1175 270 1295 392"
+          fill="none" stroke="url(#signalGradient)" stroke-width="22" stroke-linecap="round"
+          opacity="0.12" filter="url(#glowBlue)"/>
+    <path d="M250 392
+             C340 270 505 270 595 392
+             C695 516 835 516 950 392
+             C1025 270 1175 270 1295 392"
+          fill="none" stroke="url(#signalGradient)" stroke-width="7" stroke-linecap="round" opacity="0.26"/>
+    <path class="dash-flow" d="M250 392
+             C340 270 505 270 595 392
+             C695 516 835 516 950 392
+             C1025 270 1175 270 1295 392"
+          stroke="#7de6ff" stroke-width="2" opacity="0.26"/>
+    <path class="dash-flow-slow" d="M250 414
+             C348 328 507 326 595 412
+             C695 478 835 478 950 412
+             C1025 330 1173 330 1295 412"
+          stroke="#ff8a2e" stroke-width="4" opacity="0.22"/>
+
+    <g opacity="0.94">
+      <g transform="translate(430 312)">
+        <circle r="5" fill="#1fe1ff"/>
+        <circle class="pulse" r="14" fill="none" stroke="#1fe1ff" stroke-opacity="0.18"/>
+      </g>
+      <g transform="translate(784 486)">
+        <circle r="5" fill="#ff8a2e"/>
+        <circle class="pulse-slow" r="14" fill="none" stroke="#ff8a2e" stroke-opacity="0.16"/>
+      </g>
+      <g transform="translate(1133 304)">
+        <circle r="5" fill="#7de6ff"/>
+        <circle class="pulse" r="14" fill="none" stroke="#7de6ff" stroke-opacity="0.18"/>
+      </g>
+    </g>
+  </g>
+
+  <g class="ui">
+    <g transform="translate(250 392)">
+      <circle class="halo-pulse" r="174" fill="url(#stageAuraCool)"/>
+      <circle r="148" fill="url(#stageFill)" stroke="url(#ringCool)" stroke-width="1.8"/>
+      <circle r="148" fill="url(#stageShine)"/>
+      <circle r="126" fill="none" stroke="#ffffff" stroke-opacity="0.06"/>
+      <circle r="103" fill="none" stroke="#193349" stroke-width="1.2" stroke-dasharray="2 16" opacity="0.46" class="dash-flow"/>
+      <path d="M-118 -20 A120 120 0 0 1 -26 -108" fill="none" stroke="#7de6ff" stroke-width="3" stroke-linecap="round" opacity="0.88"/>
+      <path d="M38 120 A126 126 0 0 0 118 22" fill="none" stroke="#ff8a2e" stroke-width="2.6" stroke-linecap="round" opacity="0.74"/>
+
+      <g opacity="0.82">
+        <path class="icon-stroke" d="M-58 -78 L-14 -36" stroke="#21384a" stroke-width="1.2"/>
+        <path class="icon-stroke" d="M66 -50 L16 -18" stroke="#21384a" stroke-width="1.2"/>
+        <path class="icon-stroke" d="M88 28 L18 0" stroke="#21384a" stroke-width="1.2"/>
+        <path class="icon-stroke" d="M-78 40 L-16 2" stroke="#21384a" stroke-width="1.2"/>
+        <path class="icon-stroke" d="M-6 92 L2 24" stroke="#21384a" stroke-width="1.2"/>
+        <path class="icon-stroke" d="M-94 -32 L-18 -12" stroke="#21384a" stroke-width="1.2"/>
+      </g>
+
+      <g transform="translate(0 -12)">
+        <circle r="30" fill="#0b141d" stroke="#27455b" stroke-width="1.4"/>
+        <circle class="pulse" r="42" fill="none" stroke="#1fe1ff" stroke-opacity="0.12"/>
+        <g transform="translate(-20.5 -20.5) scale(0.04)">
+          <path fill="#FE6301" fill-rule="evenodd" clip-rule="evenodd" d="M 927.5 81.0 C 955.3 101.5 985.7 153.8 997.0 177.5 C 1008.3 201.2 1021.1 216.7 1024.0 284.5 C 1026.9 352.3 1031.5 683.5 1022.0 758.5 C 1012.5 833.5 963.5 899.7 943.0 927.5 C 922.5 955.3 870.2 985.7 846.5 997.0 C 822.8 1008.3 807.3 1021.1 739.5 1024.0 C 671.7 1026.9 330.8 1025.0 265.5 1022.0 C 200.2 1019.0 200.0 1008.0 179.5 998.0 C 159.0 988.0 107.3 953.7 89.5 936.0 C 71.7 918.3 37.4 869.5 27.0 846.5 C 16.6 823.5 2.9 806.3 0.0 738.5 C -2.9 670.7 -1.0 330.7 2.0 265.5 C 5.0 200.3 16.0 200.0 26.0 179.5 C 36.0 159.0 70.3 107.3 88.0 89.5 C 105.7 71.7 154.6 37.4 177.5 27.0 C 200.4 16.6 216.7 2.9 284.5 0.0 C 352.3 -2.9 683.5 -7.4 758.5 2.0 C 833.5 11.4 899.7 60.5 927.5 81.0 Z M 816.0 224.5 C 835.1 245.9 851.2 283.0 856.0 314.5 C 860.8 346.0 858.5 395.4 848.0 434.5 C 837.5 473.6 811.1 535.1 786.0 575.5 C 760.9 615.9 713.6 671.5 680.5 704.0 C 647.4 736.5 602.2 770.4 565.5 792.0 C 528.8 813.6 474.2 838.5 435.5 848.0 C 396.8 857.5 340.3 860.8 307.5 855.0 C 274.7 849.2 237.8 830.3 217.0 809.5 C 196.2 788.7 175.2 749.6 169.0 716.5 C 162.8 683.4 165.7 628.7 176.0 588.5 C 186.3 548.3 212.9 488.8 238.0 448.5 C 263.1 408.2 308.3 353.7 343.5 320.0 C 378.7 286.3 432.9 246.2 472.5 224.0 C 512.1 201.8 569.1 179.8 607.5 172.0 C 645.9 164.2 697.2 164.1 728.5 172.0 C 759.8 179.9 796.9 203.1 816.0 224.5 Z"/>
+        </g>
+      </g>
+
+      <g transform="translate(-8 -108)">
+        <rect x="-29" y="-10" width="58" height="20" rx="10" fill="url(#chipCool)" stroke="#27455b"/>
+        <circle cx="-18" cy="0" r="3.2" fill="#7de6ff"/>
+        <text class="role-text" x="-8" y="3.6">SVR</text>
+      </g>
+      <g transform="translate(72 -56)">
+        <rect x="-29" y="-10" width="58" height="20" rx="10" fill="url(#chipWarm)" stroke="#5e3316"/>
+        <circle cx="-18" cy="0" r="3.2" fill="#ff8a2e"/>
+        <text class="role-text" x="-8" y="3.6">FLT</text>
+      </g>
+      <g transform="translate(96 32)">
+        <rect x="-29" y="-10" width="58" height="20" rx="10" fill="url(#chipCool)" stroke="#27455b"/>
+        <circle cx="-18" cy="0" r="3.2" fill="#dfeeff"/>
+        <text class="role-text" x="-8" y="3.6">RCV</text>
+      </g>
+      <g transform="translate(-6 96)">
+        <rect x="-29" y="-10" width="58" height="20" rx="10" fill="url(#chipCool)" stroke="#27455b"/>
+        <circle cx="-18" cy="0" r="3.2" fill="#1fe1ff"/>
+        <text class="role-text" x="-8" y="3.6">PKR</text>
+      </g>
+      <g transform="translate(-86 40)">
+        <rect x="-29" y="-10" width="58" height="20" rx="10" fill="url(#chipWarm)" stroke="#5e3316"/>
+        <circle cx="-18" cy="0" r="3.2" fill="#ff8a2e"/>
+        <text class="role-text" x="-8" y="3.6">LDR</text>
+      </g>
+      <g transform="translate(-102 -30)">
+        <rect x="-29" y="-10" width="58" height="20" rx="10" fill="url(#chipCool)" stroke="#27455b"/>
+        <circle cx="-18" cy="0" r="3.2" fill="#7de6ff"/>
+        <text class="role-text" x="-8" y="3.6">SUP</text>
+      </g>
+
+      <g opacity="0.9">
+        <circle class="pulse" cx="88" cy="28" r="3.6" fill="#dfeeff"/>
+      </g>
+
+      <g transform="translate(-104 -98)">
+        <circle r="19" fill="#0a131d" stroke="#27455b" stroke-width="1.3"/>
+        <circle r="26" fill="none" stroke="#1fe1ff" stroke-opacity="0.12"/>
+        <text class="badge-text" x="0" y="6" text-anchor="middle">1</text>
+      </g>
+
+      <text class="stage-title" x="0" y="186" text-anchor="middle">Teams coordinate in real time</text>
+    </g>
+
+    <g transform="translate(595 392)">
+      <circle class="halo-pulse" r="174" fill="url(#stageAuraWarm)"/>
+      <circle r="148" fill="url(#stageFill)" stroke="url(#ringWarm)" stroke-width="1.8"/>
+      <circle r="148" fill="url(#stageShine)"/>
+      <circle r="126" fill="none" stroke="#ffffff" stroke-opacity="0.06"/>
+      <circle r="108" fill="none" stroke="#24384a" stroke-width="1.1" stroke-dasharray="2 18" opacity="0.42" class="dash-flow-slow"/>
+      <path d="M-118 18 C-74 -24 -34 -34 12 -18 C52 -2 78 26 116 20" fill="none" stroke="#152838" stroke-width="10" stroke-linecap="round" opacity="0.88"/>
+      <path d="M-118 18 C-74 -24 -34 -34 12 -18 C52 -2 78 26 116 20" fill="none" stroke="url(#signalGradient)" stroke-width="4" stroke-linecap="round" opacity="0.42"/>
+      <path d="M-118 18 C-74 -24 -34 -34 12 -18 C52 -2 78 26 116 20" fill="none" stroke="#7de6ff" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 12" opacity="0.26" class="dash-flow"/>
+
+      <g opacity="0.74">
+        <path class="icon-stroke" d="M-80 -60 L-42 -20" stroke="#23394d" stroke-width="1.1"/>
+        <path class="icon-stroke" d="M44 -66 L26 -28" stroke="#23394d" stroke-width="1.1"/>
+        <path class="icon-stroke" d="M-74 2 L-32 0" stroke="#23394d" stroke-width="1.1"/>
+        <path class="icon-stroke" d="M54 -6 L34 -8" stroke="#23394d" stroke-width="1.1"/>
+        <path class="icon-stroke" d="M24 66 L20 24" stroke="#23394d" stroke-width="1.1"/>
+        <path class="icon-stroke" d="M-34 84 L-16 28" stroke="#23394d" stroke-width="1.1"/>
+        <path class="icon-stroke" d="M0 -20 L2 -20" stroke="#23394d" stroke-width="1.1"/>
+      </g>
+
+      <g transform="translate(-70 -70)">
+        <rect x="-41" y="-10" width="82" height="20" rx="10" fill="url(#chipWarm)" stroke="#5e3316"/>
+        <circle class="pulse-slow" cx="-27" cy="0" r="3.2" fill="#ff8a2e"/>
+        <text class="chip-text" x="-16" y="3.6">Dock delay</text>
+      </g>
+      <g transform="translate(52 -78)">
+        <rect x="-38" y="-10" width="76" height="20" rx="10" fill="url(#chipCool)" stroke="#27455b"/>
+        <circle class="pulse" cx="-24" cy="0" r="3.2" fill="#7de6ff"/>
+        <text class="chip-text" x="-13" y="3.6">Inventory?</text>
+      </g>
+      <g transform="translate(-76 4)">
+        <rect x="-43" y="-10" width="86" height="20" rx="10" fill="url(#chipCool)" stroke="#27455b"/>
+        <circle class="pulse" cx="-28" cy="0" r="3.2" fill="#1fe1ff"/>
+        <text class="chip-text" x="-18" y="3.6">Replenish</text>
+      </g>
+      <g transform="translate(58 -8)">
+        <rect x="-39" y="-10" width="78" height="20" rx="10" fill="url(#chipWarm)" stroke="#5e3316"/>
+        <circle class="pulse-slow" cx="-24" cy="0" r="3.2" fill="#ff8a2e"/>
+        <text class="chip-text" x="-14" y="3.6">Short pick</text>
+      </g>
+      <g transform="translate(28 72)">
+        <rect x="-43" y="-10" width="86" height="20" rx="10" fill="url(#chipCool)" stroke="#27455b"/>
+        <circle class="pulse" cx="-28" cy="0" r="3.2" fill="#dfeeff"/>
+        <text class="chip-text" x="-18" y="3.6">Ship issue</text>
+      </g>
+      <g transform="translate(-36 88)">
+        <rect x="-29" y="-10" width="58" height="20" rx="10" fill="url(#chipWarm)" stroke="#5e3316"/>
+        <circle class="pulse-slow" cx="-18" cy="0" r="3.2" fill="#ff8a2e"/>
+        <text class="chip-text" x="-8" y="3.6">Safety</text>
+      </g>
+      <g transform="translate(4 -30)">
+        <rect x="-44" y="-10" width="88" height="20" rx="10" fill="url(#chipWarm)" stroke="#5e3316"/>
+        <circle class="pulse" cx="-29" cy="0" r="3.2" fill="#ff8a2e"/>
+        <text class="chip-text" x="-18" y="3.6">Escalation</text>
+      </g>
+
+      <g transform="translate(-104 -98)">
+        <circle r="19" fill="#0a131d" stroke="#5e3316" stroke-width="1.3"/>
+        <circle r="26" fill="none" stroke="#ff8a2e" stroke-opacity="0.12"/>
+        <text class="badge-text" x="0" y="6" text-anchor="middle">2</text>
+      </g>
+
+      <text class="stage-title" x="0" y="186" text-anchor="middle">Critical moments are captured</text>
+    </g>
+
+    <g transform="translate(950 392)">
+      <circle class="halo-pulse" r="174" fill="url(#stageAuraCool)"/>
+      <circle r="148" fill="url(#stageFill)" stroke="url(#ringCool)" stroke-width="1.8"/>
+      <circle r="148" fill="url(#stageShine)"/>
+      <circle r="126" fill="none" stroke="#ffffff" stroke-opacity="0.06"/>
+      <path d="M-118 -36 A126 126 0 0 1 -10 -122" fill="none" stroke="#7de6ff" stroke-width="2.8" stroke-linecap="round" opacity="0.8"/>
+      <path d="M20 122 A126 126 0 0 0 118 16" fill="none" stroke="#ff8a2e" stroke-width="2.6" stroke-linecap="round" opacity="0.66"/>
+
+      <rect x="-102" y="-92" width="60" height="184" rx="30" fill="#0c141e" stroke="#213548" stroke-opacity="0.52"/>
+      <rect x="-30" y="-106" width="60" height="212" rx="30" fill="#0d151f" stroke="#2a4254" stroke-opacity="0.6"/>
+      <rect x="42" y="-92" width="60" height="184" rx="30" fill="#0c141e" stroke="#213548" stroke-opacity="0.52"/>
+
+      <text class="soft-label" x="-72" y="-72" text-anchor="middle">Zone A</text>
+      <text class="soft-label" x="0" y="-86" text-anchor="middle">Zone B</text>
+      <text class="soft-label" x="72" y="-72" text-anchor="middle">Zone C</text>
+
+      <path d="M-72 -12 C-38 -42 18 -42 72 -12" fill="none" stroke="#7de6ff" stroke-width="2" opacity="0.52" class="dash-flow"/>
+      <path d="M-72 22 C-28 -2 22 -2 72 22" fill="none" stroke="#ff8a2e" stroke-width="2.2" opacity="0.58" class="dash-flow-slow"/>
+      <path d="M-72 58 C-30 86 22 86 72 58" fill="none" stroke="#7de6ff" stroke-width="2" opacity="0.48" class="dash-flow"/>
+
+      <path d="M-72 -12 C-40 2 -18 8 0 22 C18 38 34 44 72 58" fill="none" stroke="#172b3c" stroke-width="10" stroke-linecap="round" opacity="0.72"/>
+      <path d="M-72 -12 C-40 2 -18 8 0 22 C18 38 34 44 72 58" fill="none" stroke="url(#signalGradient)" stroke-width="3.2" stroke-linecap="round" opacity="0.34"/>
+
+      <g opacity="0.95">
+        <circle class="pulse" cx="-72" cy="-12" r="6" fill="#7de6ff"/>
+        <circle class="pulse-slow" cx="0" cy="22" r="7" fill="#ff8a2e"/>
+        <circle class="pulse" cx="72" cy="58" r="6" fill="#1fe1ff"/>
+        <circle class="pulse-slow" cx="-72" cy="22" r="5" fill="#ff8a2e"/>
+        <circle class="pulse" cx="0" cy="-12" r="5" fill="#dfeeff"/>
+        <circle class="pulse" cx="72" cy="-12" r="5" fill="#7de6ff"/>
+        <circle class="pulse-slow" cx="0" cy="58" r="6" fill="#ff8a2e"/>
+      </g>
+
+      <g>
+        <rect x="-100" y="-46" width="56" height="18" rx="9" fill="url(#chipCool)" stroke="#27455b"/>
+        <text class="mini-label" x="-72" y="-33" text-anchor="middle">Repeat</text>
+        <rect x="-28" y="-12" width="62" height="18" rx="9" fill="url(#chipWarm)" stroke="#5e3316"/>
+        <text class="mini-label" x="3" y="1" text-anchor="middle">Handoff</text>
+        <rect x="42" y="74" width="66" height="18" rx="9" fill="url(#chipCool)" stroke="#27455b"/>
+        <text class="mini-label" x="75" y="87" text-anchor="middle">Bottleneck</text>
+      </g>
+
+      <g transform="translate(-104 -98)">
+        <circle r="19" fill="#0a131d" stroke="#27455b" stroke-width="1.3"/>
+        <circle r="26" fill="none" stroke="#7de6ff" stroke-opacity="0.12"/>
+        <text class="badge-text" x="0" y="6" text-anchor="middle">3</text>
+      </g>
+
+      <text class="stage-title" x="-13" y="186" text-anchor="middle">Operational pattern visibility</text>
+    </g>
+
+    <g transform="translate(1295 392)">
+      <circle class="halo-pulse" r="164" fill="url(#stageAuraWarm)" opacity="0.72"/>
+      <circle r="148" fill="url(#stageFill)" stroke="url(#ringWarm)" stroke-width="1.8"/>
+      <circle r="148" fill="url(#stageShine)"/>
+      <circle r="126" fill="none" stroke="#ffffff" stroke-opacity="0.06"/>
+      <circle r="102" fill="none" stroke="#1c2f40" stroke-width="1.2" stroke-dasharray="2 18" opacity="0.34"/>
+      <path d="M-118 26 A124 124 0 0 1 -40 -108" fill="none" stroke="#7de6ff" stroke-width="2.6" stroke-linecap="round" opacity="0.66"/>
+      <path d="M24 120 A126 126 0 0 0 116 6" fill="none" stroke="#ff8a2e" stroke-width="2.4" stroke-linecap="round" opacity="0.56"/>
+
+      <rect x="-72" y="-58" width="144" height="116" rx="24" fill="#0b141d" stroke="#28495f" stroke-width="1.2"/>
+      <rect x="-60" y="-46" width="120" height="18" rx="9" fill="#0f1822" stroke="#1d2d3d" stroke-opacity="0.8"/>
+      <circle cx="-42" cy="-37" r="3" fill="#ff7a1a"/>
+      <circle cx="-30" cy="-37" r="3" fill="#7de6ff" opacity="0.45"/>
+      <circle cx="-18" cy="-37" r="3" fill="#dfeeff" opacity="0.38"/>
+      <path class="icon-stroke" d="M-46 18 L-12 -2 L10 8 L36 -18" stroke="#7de6ff" stroke-width="2.6"/>
+      <path class="icon-stroke" d="M36 -18 L28 -18 M36 -18 L36 -10" stroke="#ff8a2e" stroke-width="2"/>
+      <path class="icon-stroke" d="M-44 34 H42" stroke="#1c2f40" stroke-width="1.3"/>
+      <path class="icon-stroke" d="M-44 46 H18" stroke="#1c2f40" stroke-width="1.3"/>
+      <path class="icon-stroke" d="M-44 22 H8" stroke="#1c2f40" stroke-width="1.3"/>
+
+      <g>
+        <rect x="-102" y="-82" width="58" height="18" rx="9" fill="url(#chipCool)" stroke="#27455b"/>
+        <text class="mini-label" x="-73" y="-69" text-anchor="middle">Review</text>
+        <rect x="50" y="66" width="72" height="18" rx="9" fill="url(#chipCool)" stroke="#27455b"/>
+        <text class="mini-label" x="86" y="79" text-anchor="middle">Response</text>
+      </g>
+
+      <g transform="translate(-104 -98)">
+        <circle r="19" fill="#0a131d" stroke="#5e3316" stroke-width="1.3"/>
+        <circle r="26" fill="none" stroke="#ff8a2e" stroke-opacity="0.12"/>
+        <text class="badge-text" x="0" y="6" text-anchor="middle">4</text>
+      </g>
+
+      <text class="stage-title" x="0" y="186" text-anchor="middle">Leaders act with more clarity</text>
+    </g>
+  </g>
+
+  <g class="treatment" opacity="0.65">
+    <path class="hairline" d="M250 546 C250 566 250 580 250 594"/>
+    <path class="hairline" d="M595 546 C595 566 595 580 595 594"/>
+    <path class="hairline" d="M950 546 C950 566 950 580 950 594"/>
+    <path class="hairline" d="M1295 546 C1295 566 1295 580 1295 594"/>
+  </g>
+
+  <g class="ui">
+    <g transform="translate(113 612)">
+      <path d="M0 0 H64" fill="none" stroke="#7de6ff" stroke-width="2" stroke-linecap="round" opacity="0.95"/>
+      <text class="stage-copy" x="0" y="28">
+        <tspan x="0" dy="0">Supervisors, forklift operators,</tspan>
+        <tspan x="0" dy="24">receivers, pickers, loaders, and</tspan>
+        <tspan x="0" dy="24">support teams communicate</tspan>
+        <tspan x="0" dy="24">constantly over radio to keep</tspan>
+        <tspan x="0" dy="24">the floor moving.</tspan>
+      </text>
+    </g>
+
+    <g transform="translate(453 612)">
+      <path d="M0 0 H64" fill="none" stroke="#ff8a2e" stroke-width="2" stroke-linecap="round" opacity="0.95"/>
+      <text class="stage-copy" x="0" y="28">
+        <tspan x="0" dy="0">Dock delays, inventory questions,</tspan>
+        <tspan x="0" dy="24">replenishment requests, short picks,</tspan>
+        <tspan x="0" dy="24">shipping issues, safety concerns,</tspan>
+        <tspan x="0" dy="24">and escalations are recorded as</tspan>
+        <tspan x="0" dy="24">they happen.</tspan>
+      </text>
+    </g>
+
+    <g transform="translate(808 612)">
+      <path d="M0 0 H64" fill="none" stroke="#7de6ff" stroke-width="2" stroke-linecap="round" opacity="0.95"/>
+      <text class="stage-copy" x="0" y="28">
+        <tspan x="0" dy="0">Memo helps surface recurring issue</tspan>
+        <tspan x="0" dy="24">types, repeated handoff failures,</tspan>
+        <tspan x="0" dy="24">floor bottlenecks, and coordination</tspan>
+        <tspan x="0" dy="24">gaps across shifts and zones.</tspan>
+      </text>
+    </g>
+
+    <g transform="translate(1163 612)">
+      <path d="M0 0 H64" fill="none" stroke="#ff8a2e" stroke-width="2" stroke-linecap="round" opacity="0.95"/>
+      <text class="stage-copy" x="0" y="28">
+        <tspan x="0" dy="0">Warehouse leaders can review what</tspan>
+        <tspan x="0" dy="24">happened, identify where execution</tspan>
+        <tspan x="0" dy="24">slipped, and improve throughput,</tspan>
+        <tspan x="0" dy="24">response quality, and floor discipline</tspan>
+        <tspan x="0" dy="24">with a clearer operational record.</tspan>
+      </text>
+    </g>
+  </g>
+  </g>
+
+</svg>
