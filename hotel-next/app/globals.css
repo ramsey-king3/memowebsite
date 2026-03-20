@@ -49,3 +49,58 @@
     radial-gradient(760px 360px at 20% 12%, rgba(31, 225, 255, 0.1), transparent 62%),
     radial-gradient(680px 340px at 88% 14%, rgba(255, 122, 26, 0.1), transparent 64%);
 }
+
+/* Drift the whole grid layer (lines + dots) — transform animates reliably vs background-position. */
+@keyframes memoGridDrift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -12px, 0);
+  }
+}
+
+.memo-dots-drift {
+  animation: memoGridDrift 7s linear infinite;
+  will-change: transform;
+}
+
+/* Under-card glow: lives OUTSIDE the clipped <article> (sibling in .memo-card-hover-wrap). */
+.memo-card-underglow {
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: min(88%, 380px);
+  height: 64px;
+  transform: translateX(-50%);
+  border-radius: 9999px;
+  opacity: 0;
+  filter: blur(18px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes memoUnderglowPulse {
+  0%,
+  100% {
+    opacity: 0.42;
+    transform: translateX(-50%) scaleX(0.92) scaleY(0.88);
+  }
+  50% {
+    opacity: 0.88;
+    transform: translateX(-50%) scaleX(1.06) scaleY(1.05);
+  }
+}
+
+.memo-card-hover-wrap:hover .memo-card-underglow {
+  animation: memoUnderglowPulse 1.85s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .memo-dots-drift {
+    animation-duration: 22s;
+  }
+  .memo-card-hover-wrap:hover .memo-card-underglow {
+    animation-duration: 3.2s;
+  }
+}

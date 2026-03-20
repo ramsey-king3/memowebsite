@@ -6,6 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "build:static": "MEMO_STATIC_EXPORT=1 next build",
+    "preview:static": "npx --yes serve@14 out",
     "lint": "next lint"
   },
   "dependencies": {

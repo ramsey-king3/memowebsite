@@ -37,14 +37,22 @@ type HotelInsightCardProps = {
   body: string;
   icon: ReactNode;
   variant?: HotelCardVariant;
+  /** When true, adds a subtle pulsing glow under the card on hover. */
+  enableHoverGlowPulse?: boolean;
 };
 
-export function HotelInsightCard({ title, body, icon, variant = "default" }: HotelInsightCardProps) {
+export function HotelInsightCard({
+  title,
+  body,
+  icon,
+  variant = "default",
+  enableHoverGlowPulse = false,
+}: HotelInsightCardProps) {
   const v = shells[variant];
 
-  return (
+  const article = (
     <article
-      className={`relative overflow-hidden rounded-card border p-[22px] shadow-card transition-[transform,border-color,box-shadow] duration-200 ease-out motion-reduce:transition-none md:hover:-translate-y-[3px] md:hover:shadow-card-hover ${v.border} ${v.hoverBorder} focus-within:border-[rgba(255,122,26,0.58)] focus-within:shadow-[0_0_0_2px_rgba(255,122,26,0.35),0_26px_70px_rgba(0,0,0,0.32)] max-md:px-[18px] max-md:pb-[18px] max-md:pt-5`}
+      className={`relative z-[1] overflow-hidden rounded-card border p-[22px] shadow-card transition-[transform,border-color,box-shadow] duration-200 ease-out motion-reduce:transition-none md:hover:-translate-y-[3px] md:hover:shadow-card-hover ${v.border} ${v.hoverBorder} focus-within:border-[rgba(255,122,26,0.58)] focus-within:shadow-[0_0_0_2px_rgba(255,122,26,0.35),0_26px_70px_rgba(0,0,0,0.32)] max-md:px-[18px] max-md:pb-[18px] max-md:pt-5`}
       style={{
         backgroundImage: `radial-gradient(circle at 100% 0%, ${v.accentSoft}, transparent 42%), linear-gradient(145deg, rgba(10, 19, 29, 0.92), rgba(8, 13, 20, 0.97))`,
       }}
@@ -75,5 +83,22 @@ export function HotelInsightCard({ title, body, icon, variant = "default" }: Hot
         </div>
       </div>
     </article>
+  );
+
+  if (!enableHoverGlowPulse) {
+    return article;
+  }
+
+  return (
+    <div className="memo-card-hover-wrap relative z-0 pb-3">
+      <div
+        className="memo-card-underglow"
+        aria-hidden
+        style={{
+          background: `radial-gradient(ellipse at 50% 40%, ${v.accentSoft}, transparent 72%)`,
+        }}
+      />
+      {article}
+    </div>
   );
 }
