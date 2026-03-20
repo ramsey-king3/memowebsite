@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Memo for Warehouses</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      /* Warehouse hero-specific tuning.
+         The warehouse headline/subheader are longer than the hotel copy, so we slightly
+         reduce max font sizes and adjust the CTA/proof vertical rhythm to keep everything centered. */
+      .memo-warehouse-hero h1 {
+        margin-top: 72px;
+        font-size: clamp(2.9rem, 5.0vw, 3.42rem);
+      }
+
+      .memo-warehouse-hero h1 > span:first-child {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        white-space: nowrap;
+        transform: translateX(-32.5px);
+      }
+
+      .memo-warehouse-hero .subheader {
+        font-size: clamp(1.48rem, 2.85vw, 1.98rem);
+      }
+
+      .memo-warehouse-hero .subheader--first {
+        margin-top: 25px;
+        transform: translateX(-32.5px);
+      }
+
+      #memo-warehouse-radio-title {
+        white-space: nowrap;
+        text-align: center;
+        max-width: none;
+      }
+
+      .memo-warehouse-hero .hero-cta {
+        margin-left: auto;
+        margin-right: auto;
+        /* Nudge up a touch to account for slightly different headline wrapping. */
+        margin-top: calc(clamp(22px, 3.5vw, 32px) + 62px);
+      }
+
+      .memo-warehouse-hero .hero-proofs {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 125px;
+      }
+
+      @media (max-width: 1060px) {
+        .memo-warehouse-hero .hero-cta {
+          margin-top: calc(clamp(22px, 3.5vw, 32px) + 28px);
+        }
+
+        .memo-warehouse-hero .hero-proofs {
+          margin-top: 70px;
+        }
+      }
+
+      @media (max-width: 720px) {
+        /* Let the warehouse subheader wrap so it never overflows. */
+        .memo-warehouse-hero .subheader {
+          white-space: normal;
+        }
+
+        .memo-warehouse-hero h1 {
+          margin-top: 56px;
+          font-size: clamp(2.55rem, 12.1vw, 3.35rem);
+        }
+
+        .memo-warehouse-hero .hero-cta {
+          margin-top: 48px;
+        }
+
+        .memo-warehouse-hero .hero-proofs {
+          margin-top: 55px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="memo-page">
+      <!-- 1) Warehouse-hero-section -->
+      <section class="memo-hotel-hero memo-warehouse-hero" aria-labelledby="hero-title">
+        <div class="guide guide--top" aria-hidden="true"></div>
+        <div class="guide guide--bottom" aria-hidden="true"></div>
+        <div class="guide guide--mid" aria-hidden="true"></div>
+        <div class="glint glint--left" aria-hidden="true"></div>
+        <div class="glint glint--right" aria-hidden="true"></div>
+
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <div class="hero-accent" aria-hidden="true"></div>
+            <h1 id="hero-title">
+              <span>Warehouse radio traffic signals bottlenecks, exceptions, and delays.</span>
+              <span class="subheader subheader--first">
+                Memo turns that traffic into wall-to-wall operational visibility.
+              </span>
+            </h1>
+
+            <a class="hero-cta" href="https://forms.fillout.com/t/187CfG9jqsus">Schedule a time to speak</a>
+
+            <div class="hero-proofs" aria-label="Memo deployment proof points">
+              <span class="proof-chip">Your existing radios</span>
+              <span class="proof-chip proof-chip--warm">Rapid deployment</span>
+              <span class="proof-chip">Fully on-prem</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2) Warehouse-radio-visibility-section -->
+      <section class="memo-hotel-section" aria-labelledby="memo-warehouse-radio-title">
+        <header class="memo-hotel-header">
+          <h2 id="memo-warehouse-radio-title">
+            Zero visibility into radio traffic slows warehouse execution
+          </h2>
+        </header>
+
+        <div class="memo-hotel-grid" role="list" aria-label="Operational visibility gaps">
+          <article class="memo-hotel-card memo-hotel-card--neutral" role="listitem" tabindex="0">
+            <div class="memo-hotel-card__top">
+              <div class="memo-hotel-icon" aria-hidden="true">
+                <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M14 4.2 L24 22.2 H4 Z"
+                    fill="none"
+                    stroke="#ff8a2e"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M14 10 V15.6"
+                    fill="none"
+                    stroke="#7de6ff"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M14 19.1 H14.01"
+                    fill="none"
+                    stroke="#7de6ff"
+                    stroke-width="2.4"
+                    stroke-linecap="round"
+                  />
+                  <path d="M6.4 22.2 H21.6" fill="none" stroke="#15212f" stroke-width="1.2" opacity="0.9" />
+                </svg>
+              </div>
+              <div>
+                <h3>Execution issues are often visible on the radio before they show up in a report</h3>
+                <p>
+                  The first signs of congestion, delayed replenishment, short picks, dock slowdowns, and missed handoffs
+                  often surface over radio long before they appear in system data or supervisor review.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="memo-hotel-card memo-hotel-card--soft" role="listitem" tabindex="0">
+            <div class="memo-hotel-card__top">
+              <div class="memo-hotel-icon" aria-hidden="true">
+                <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 8.5 H22" fill="none" stroke="#7de6ff" stroke-width="1.8" stroke-linecap="round" />
+                  <path d="M6 14 H22" fill="none" stroke="#2b4357" stroke-width="1.6" stroke-linecap="round" />
+                  <path
+                    d="M6 19.5 H22"
+                    fill="none"
+                    stroke="#2b4357"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  />
+                  <circle cx="10" cy="8.5" r="2.1" fill="#0d141b" stroke="#7de6ff" stroke-width="1.4" />
+                  <path d="M16.2 8.5 h4.8" fill="none" stroke="#ff8a2e" stroke-width="1.8" stroke-linecap="round" />
+                  <path d="M18.6 6.2 v4.6" fill="none" stroke="#ff8a2e" stroke-width="1.8" stroke-linecap="round" />
+                </svg>
+              </div>
+              <div>
+                <h3>There is no clear record of how exceptions unfolded</h3>
+                <p>
+                  When orders miss cutoff, a trailer gets backed up, or a floor issue escalates, teams often cannot easily
+                  reconstruct when it was first called out, how it was routed, or where the response slowed down.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="memo-hotel-card memo-hotel-card--amber" role="listitem" tabindex="0">
+            <div class="memo-hotel-card__top">
+              <div class="memo-hotel-icon" aria-hidden="true">
+                <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Two gears + strike-through -->
+                  <circle cx="10.6" cy="10.8" r="4.2" fill="none" stroke="#7de6ff" stroke-width="1.7" />
+                  <circle cx="10.6" cy="10.8" r="1.9" fill="none" stroke="#2b4357" stroke-width="1.6" />
+                  <path
+                    d="M10.6 5.2 V3.7 M10.6 17.9 V16.4 M5 10.8 H3.5 M17.7 10.8 H16.2"
+                    fill="none"
+                    stroke="#7de6ff"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M6.6 6.9 L5.5 5.8 M15.7 15.8 L14.6 14.7 M14.6 6.9 L15.7 5.8 M5.5 15.8 L6.6 14.7"
+                    fill="none"
+                    stroke="#7de6ff"
+                    stroke-width="1.45"
+                    stroke-linecap="round"
+                  />
+
+                  <circle cx="17.2" cy="15.8" r="2.9" fill="none" stroke="#7de6ff" stroke-width="1.6" />
+                  <circle cx="17.2" cy="15.8" r="1.25" fill="none" stroke="#2b4357" stroke-width="1.4" />
+                  <path
+                    d="M17.2 12.7 V11.7 M17.2 20.0 V19.0 M14.1 15.8 H13.1 M21.3 15.8 H20.3"
+                    fill="none"
+                    stroke="#7de6ff"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  />
+
+                  <path d="M4.2 18.6 L20.6 4.6" fill="none" stroke="#ff8a2e" stroke-width="2" stroke-linecap="round" />
+                  <circle cx="12.6" cy="12.6" r="8.6" fill="none" stroke="#ff7a1a" stroke-opacity="0.16" stroke-width="1.2" />
+                </svg>
+              </div>
+              <div>
+                <h3>The same coordination problems keep repeating across shifts</h3>
+                <p>
+                  Delayed replenishment, incomplete handoffs, picking confusion, dock misalignment, and recurring response gaps
+                  can happen every day — but without visibility into communication patterns, they stay buried in live radio traffic.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="memo-hotel-card" role="listitem" tabindex="0">
+            <div class="memo-hotel-card__top">
+              <div class="memo-hotel-icon" aria-hidden="true">
+                <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="9" y="6" width="10" height="16" rx="3" fill="none" stroke="#7de6ff" stroke-width="1.6" />
+                  <path d="M11 10.2 H17" fill="none" stroke="#2b4357" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M11 13.8 H17" fill="none" stroke="#2b4357" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M14 22.7 v2" fill="none" stroke="#15212f" stroke-width="1.2" opacity="0.9" />
+                  <path d="M19.8 9.4 C22 10.9 23.2 12.9 23.2 14.9 C23.2 16.9 22 18.9 19.8 20.4" fill="none" stroke="#ff8a2e" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M21.4 11.4 C22.3 12.4 22.8 13.6 22.8 14.9 C22.8 16.2 22.3 17.4 21.4 18.4" fill="none" stroke="#ff7a1a" stroke-width="1.6" stroke-linecap="round" />
+                  <circle cx="14" cy="18.4" r="1.2" fill="#23e072" />
+                </svg>
+              </div>
+              <div>
+                <h3>Warehouse leaders are managing without visibility into frontline execution</h3>
+                <p>
+                  The radio is where floor reality lives, but most operations have no clean way to capture, review, or learn
+                  from the communication behind daily execution.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="memo-hotel-cta-wrap">
+          <a class="memo-hotel-cta" href="https://forms.fillout.com/t/187CfG9jqsus">Schedule a time to speak</a>
+        </p>
+      </section>
+
+      <!-- 3) Warehouse use-case section -->
+      <section class="memo-svg-section memo-svg-section--usecase" aria-label="Warehouse use cases">
+        <div class="memo-svg-card">
+          <div class="memo-svg-media memo-svg-media--usecase">
+            <object
+              class="memo-svg-embed"
+              data="./warehouse-usecase-section.svg"
+              type="image/svg+xml"
+              aria-label="Where Memo drives clarity across warehouse and logistics operations"
+            >
+              <img src="./warehouse-usecase-section.svg" alt="" loading="lazy" decoding="async" />
+            </object>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4) Warehouse workflow fit section -->
+      <section class="memo-svg-section memo-svg-section--workflow" aria-label="Warehouse workflow fit">
+        <div class="memo-svg-card">
+          <div class="memo-svg-media memo-svg-media--workflow">
+            <object
+              class="memo-svg-embed"
+              data="./warehouse-workflow-fit.svg"
+              type="image/svg+xml"
+              aria-label="Memo workflow adapts to warehouse and logistics operations"
+            >
+              <img src="./warehouse-workflow-fit.svg" alt="" loading="lazy" decoding="async" />
+            </object>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5) Contact / schedule anchor (same structure as hotel page) -->
+      <section id="schedule-time-to-speak" class="memo-schedule" aria-label="Schedule a time to speak">
+        <div class="memo-schedule-inner">
+          <div class="memo-schedule-accent" aria-hidden="true"></div>
+          <h2 class="memo-schedule-title">Schedule a time to speak</h2>
+          <p class="memo-schedule-copy">
+            Memo turns radio traffic into measurable operational insight across warehouse and logistics operations.
+          </p>
+          <a class="hero-cta memo-schedule-cta" href="https://forms.fillout.com/t/187CfG9jqsus">Schedule a time to speak</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
