@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply min-h-screen antialiased text-memo-text;
+    background-color: theme("colors.memo.bg.start");
+    background-image:
+      radial-gradient(circle at 16% 18%, rgba(31, 225, 255, 0.14), transparent 34%),
+      radial-gradient(circle at 84% 12%, rgba(255, 122, 26, 0.12), transparent 28%),
+      linear-gradient(145deg, #04060a 0%, #05080d 58%, #07101a 100%);
+  }
+
+  a {
+    @apply text-inherit;
+  }
+
+  :focus-visible {
+    outline: none;
+  }
+}
+
+/* Layered grid + glow used on hero / schedule shells (matches legacy memo-panel feel) */
+.memo-surface-grid {
+  background-image:
+    linear-gradient(theme("colors.memo.line") 1px, transparent 1px),
+    linear-gradient(90deg, theme("colors.memo.line") 1px, transparent 1px),
+    radial-gradient(circle at 1.5px 1.5px, theme("colors.memo.dot") 1px, transparent 1.2px);
+  background-size: 48px 48px, 48px 48px, 12px 12px;
+}
+
+.memo-surface-glow {
+  background:
+    radial-gradient(760px 360px at 20% 12%, rgba(31, 225, 255, 0.1), transparent 62%),
+    radial-gradient(680px 340px at 88% 14%, rgba(255, 122, 26, 0.1), transparent 64%);
+}
