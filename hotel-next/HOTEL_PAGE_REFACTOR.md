@@ -22,7 +22,7 @@ The original HTML file and static assets under `../hotel/` are **not modified** 
 | Global / body background | `app/layout.tsx`, `app/globals.css` |
 | Tailwind theme extensions | `tailwind.config.ts` |
 
-Root page: `app/page.tsx` is a short entry with links to `/hotel` and `/datacenter` so this app can coexist with the static site at the repo root.
+Root page: `app/page.tsx` is a short entry with links to `/hotel`, `/datacenter`, and `/warehouse` so this app can coexist with the static site at the repo root.
 
 ## Datacenter page (Next.js)
 
@@ -42,6 +42,24 @@ A matching refactor of **`../datacenter/datacenter-page-synthesized.html`** (leg
 
 Metadata for the data center route is set in `app/datacenter/page.tsx` (`title: Memo for Data Centers`).
 
+## Warehouse page (Next.js)
+
+A matching refactor of **`../warehouse/warehouse-page-synthesized.html`** (legacy HTML and `warehouse/*.svg` in the repo root are unchanged).
+
+| Area | Path |
+|------|------|
+| Route | `app/warehouse/page.tsx` → URL `/warehouse` |
+| Warehouse sections | `components/warehouse/*` |
+| Warehouse card icons | `components/warehouse/icons/*` |
+| Diagram SVGs (copied for Next static serving) | `public/warehouse/warehouse-usecase-section.svg`, `public/warehouse/warehouse-workflow-fit.svg` |
+
+**Shared vs page-specific**
+
+- **Shared:** `MemoPageShell`, `MemoDiagramSection`, `HotelPrimaryCta`, `ProofChips`, `SectionHeading`, `HotelInsightCard`.
+- **Warehouse-only:** `WarehouseHero`, `WarehouseVisibilitySection`, `WarehouseScheduleSection`, `WarehouseDiagramSection` (fluid `<object>` embed so SVG-internal motion runs + light frame animation in `globals.css`), `warehouseScheduleUrl` (Fillout CTA URL; same URL as datacenter), warehouse icons.
+
+Metadata for the warehouse route is set in `app/warehouse/page.tsx` (`title: Memo for Warehouses`).
+
 ## How to run
 
 From the `hotel-next` directory:
@@ -51,7 +69,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000/hotel](http://localhost:3000/hotel), [http://localhost:3000/datacenter](http://localhost:3000/datacenter), or `/` for entry links.
+Open [http://localhost:3000/hotel](http://localhost:3000/hotel), [http://localhost:3000/datacenter](http://localhost:3000/datacenter), [http://localhost:3000/warehouse](http://localhost:3000/warehouse), or `/` for entry links.
 
 **Important:** Always include the dev server **port** (`:3000` by default). If the address bar shows only `http://localhost/...` with **no port**, you are usually hitting a different web server (for example a static file server on port 80). That often returns **200** for the HTML but **404** for `/_next/static/css/...` and `/_next/static/chunks/...`, so the page renders **unstyled** (default serif font, broken layout).
 
@@ -96,4 +114,4 @@ If you proxy only `/hotel` or `/datacenter` to Next but not `/_next`, assets wil
 ## Notes
 
 - Large **use case** and **workflow** graphics remain SVG files (illustration-only); layout and typography for the rest of the page are HTML + Tailwind.
-- The **datacenter** vertical uses the same patterns; see the **Datacenter page** section above. Warehouse can follow the same approach when needed.
+- The **datacenter** and **warehouse** verticals use the same patterns; see the **Datacenter page** and **Warehouse page** sections above.

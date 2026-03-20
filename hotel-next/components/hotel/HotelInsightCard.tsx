@@ -39,6 +39,8 @@ type HotelInsightCardProps = {
   variant?: HotelCardVariant;
   /** When true, adds a subtle pulsing glow under the card on hover. */
   enableHoverGlowPulse?: boolean;
+  /** Fill the grid cell height (pair with a flex `li` in a stretched CSS grid row). */
+  stretchInGrid?: boolean;
 };
 
 export function HotelInsightCard({
@@ -47,12 +49,17 @@ export function HotelInsightCard({
   icon,
   variant = "default",
   enableHoverGlowPulse = false,
+  stretchInGrid = false,
 }: HotelInsightCardProps) {
   const v = shells[variant];
 
+  const stretchArticle =
+    stretchInGrid ? " flex h-full min-h-0 w-full min-w-0 flex-1 flex-col" : "";
+  const stretchInner = stretchInGrid ? " flex-1" : "";
+
   const article = (
     <article
-      className={`relative z-[1] overflow-hidden rounded-card border p-[22px] shadow-card transition-[transform,border-color,box-shadow] duration-200 ease-out motion-reduce:transition-none md:hover:-translate-y-[3px] md:hover:shadow-card-hover ${v.border} ${v.hoverBorder} focus-within:border-[rgba(255,122,26,0.58)] focus-within:shadow-[0_0_0_2px_rgba(255,122,26,0.35),0_26px_70px_rgba(0,0,0,0.32)] max-md:px-[18px] max-md:pb-[18px] max-md:pt-5`}
+      className={`relative z-[1] overflow-hidden rounded-card border p-[22px] shadow-card transition-[transform,border-color,box-shadow] duration-200 ease-out motion-reduce:transition-none md:hover:-translate-y-[3px] md:hover:shadow-card-hover ${v.border} ${v.hoverBorder} focus-within:border-[rgba(255,122,26,0.58)] focus-within:shadow-[0_0_0_2px_rgba(255,122,26,0.35),0_26px_70px_rgba(0,0,0,0.32)] max-md:px-[18px] max-md:pb-[18px] max-md:pt-5${stretchArticle}`}
       style={{
         backgroundImage: `radial-gradient(circle at 100% 0%, ${v.accentSoft}, transparent 42%), linear-gradient(145deg, rgba(10, 19, 29, 0.92), rgba(8, 13, 20, 0.97))`,
       }}
@@ -66,7 +73,9 @@ export function HotelInsightCard({
         style={{ backgroundColor: v.accent }}
         aria-hidden
       />
-      <div className="relative z-[1] mt-2.5 grid grid-cols-[40px_1fr] items-start gap-3.5 sm:grid-cols-[44px_1fr]">
+      <div
+        className={`relative z-[1] mt-2.5 grid grid-cols-[40px_1fr] items-start gap-3.5 sm:grid-cols-[44px_1fr]${stretchInner}`}
+      >
         <div
           className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-[rgba(35,56,74,0.92)] bg-gradient-to-br from-[rgba(9,18,27,0.98)] to-[rgba(9,16,22,0.98)] shadow-[0_0_0_1px_rgba(31,225,255,0.08)] sm:h-11 sm:w-11 sm:rounded-2xl"
           aria-hidden
@@ -89,8 +98,10 @@ export function HotelInsightCard({
     return article;
   }
 
+  const wrapStretch = stretchInGrid ? " flex h-full min-h-0 w-full flex-col" : "";
+
   return (
-    <div className="memo-card-hover-wrap relative z-0 pb-3">
+    <div className={`memo-card-hover-wrap relative z-0 pb-3${wrapStretch}`}>
       <div
         className="memo-card-underglow"
         aria-hidden

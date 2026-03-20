@@ -104,3 +104,39 @@
     animation-duration: 3.2s;
   }
 }
+
+/* Warehouse diagrams: light frame motion (SVG dash/pulse runs inside `<object>`). */
+@keyframes memoDiagramLiveGridDrift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-10px, -8px, 0);
+  }
+}
+
+@keyframes memoDiagramLiveSheen {
+  0%,
+  100% {
+    opacity: 0.42;
+  }
+  50% {
+    opacity: 0.72;
+  }
+}
+
+.memo-diagram-live-grid {
+  animation: memoDiagramLiveGridDrift 14s linear infinite;
+  will-change: transform;
+}
+
+.memo-diagram-live-sheen {
+  animation: memoDiagramLiveSheen 7s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .memo-diagram-live-grid,
+  .memo-diagram-live-sheen {
+    animation: none !important;
+  }
+}
