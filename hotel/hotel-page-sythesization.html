@@ -3,213 +3,302 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Memo for Hotels</title>
-    <link rel="stylesheet" href="../styles.css" />
+    <meta
+      name="description"
+      content="Memo turns hotel radio traffic into measurable operational insight—on your existing radios, deployed fast, fully on-premises."
+    />
+    <title>Memo for Hotels | Radio Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./hotel-landing.css" />
   </head>
-  <body>
-    <main class="memo-page">
-      <!-- 1) Hotel-hero-section -->
-      <section class="memo-hotel-hero" aria-labelledby="hero-title">
-        <div class="guide guide--top" aria-hidden="true"></div>
-        <div class="guide guide--bottom" aria-hidden="true"></div>
-        <div class="guide guide--mid" aria-hidden="true"></div>
-        <div class="glint glint--left" aria-hidden="true"></div>
-        <div class="glint glint--right" aria-hidden="true"></div>
+  <body class="hl">
+    <a class="hl-skip" href="#main">Skip to content</a>
 
-        <div class="hero-inner">
-          <div class="hero-copy">
-            <div class="hero-accent" aria-hidden="true"></div>
-            <h1 id="hero-title">
-              <span>Radio traffic is where hotel service issues surface first.</span>
-              <span class="subheader subheader--first">
-                Memo turns that traffic into measurable operational insight.
-              </span>
-            </h1>
+    <header class="hl-nav" role="banner">
+      <span class="hl-mark">Memo</span>
+      <a class="hl-nav-cta" href="#schedule-time-to-speak">Schedule</a>
+    </header>
 
-            <a class="hero-cta" href="#schedule-time-to-speak">Schedule a time to speak</a>
-
-            <div class="hero-proofs" aria-label="Memo deployment proof points">
-              <span class="proof-chip">Your existing radios</span>
-              <span class="proof-chip proof-chip--warm">Rapid deployment</span>
-              <span class="proof-chip">Fully on-prem</span>
+    <main id="main" class="hl-main">
+      <!-- 1) Hero: hotel-hero-section copy -->
+      <section class="hl-section hl-hero" aria-labelledby="hero-title">
+        <div class="hl-hero__inner">
+          <div class="hl-hero__copy">
+            <p class="hl-kicker">Hotels · Radio intelligence</p>
+            <h1 id="hero-title">Radio traffic is where hotel service issues surface first.</h1>
+            <p class="hl-hero__lead">Memo turns that traffic into measurable operational insight.</p>
+            <div class="hl-hero__actions">
+              <a class="hl-btn hl-btn--primary" href="#schedule-time-to-speak">Schedule a time to speak</a>
             </div>
           </div>
+          <aside class="hl-hero__aside" aria-label="Deployment">
+            <p class="hl-hero__label">At a glance</p>
+            <ul class="hl-proof-list">
+              <li><strong>Your existing radios</strong> No rip-and-replace.</li>
+              <li><strong>Rapid deployment</strong> Operational signal, sooner.</li>
+              <li><strong>Fully on-prem</strong> Data stays in your building.</li>
+            </ul>
+          </aside>
         </div>
       </section>
 
-      <!-- 2) Hotel-radio-visibility-section copy -->
-      <section class="memo-hotel-section" aria-labelledby="memo-hotel-title">
-        <header class="memo-hotel-header">
-          <h2 id="memo-hotel-title">Zero visibility into your radio traffic harms your hotel</h2>
+      <!-- 2) Zero visibility: hotel-radio-visibility-section copy -->
+      <section class="hl-section hl-insights" aria-labelledby="insights-title">
+        <header class="hl-insights__head">
+          <p class="hl-insights__eyebrow">Operational visibility</p>
+          <h2 id="insights-title">Zero visibility into your radio traffic harms your hotel</h2>
         </header>
 
-        <div class="memo-hotel-grid" role="list" aria-label="Operational visibility gaps">
-          <article class="memo-hotel-card memo-hotel-card--neutral" role="listitem" tabindex="0">
-            <div class="memo-hotel-card__top">
-              <div class="memo-hotel-icon" aria-hidden="true">
-                <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M14 4.2 L24 22.2 H4 Z"
-                    fill="none"
-                    stroke="#ff8a2e"
-                    stroke-width="1.8"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M14 10 V15.6"
-                    fill="none"
-                    stroke="#7de6ff"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                  />
-                  <path
-                    d="M14 19.1 H14.01"
-                    fill="none"
-                    stroke="#7de6ff"
-                    stroke-width="2.4"
-                    stroke-linecap="round"
-                  />
-                  <path d="M6.4 22.2 H21.6" fill="none" stroke="#15212f" stroke-width="1.2" opacity="0.9" />
-                </svg>
-              </div>
-              <div>
-                <h3>Guest experience issues are often caught too late</h3>
-                <p>
-                  The first warning signs of a poor stay usually surface over the radio—not in a dashboard. By the
-                  time management sees the problem, the guest experience may already be off track.
-                </p>
-              </div>
+        <div class="hl-insights__list">
+          <article class="hl-insight">
+            <div class="hl-insight__glyph" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16 5 27 26H5L16 5Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
+                />
+                <path d="M16 12v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M16 22h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="hl-insight__body">
+              <h3>Guest experience issues are often caught too late</h3>
+              <p>
+                The first warning signs of a poor stay usually surface over the radio—not in a dashboard. By the time
+                management sees the problem, the guest experience may already be off track.
+              </p>
             </div>
           </article>
 
-          <article class="memo-hotel-card memo-hotel-card--soft" role="listitem" tabindex="0">
-            <div class="memo-hotel-card__top">
-              <div class="memo-hotel-icon" aria-hidden="true">
-                <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 8.5 H22" fill="none" stroke="#7de6ff" stroke-width="1.8" stroke-linecap="round" />
-                  <path d="M6 14 H22" fill="none" stroke="#2b4357" stroke-width="1.6" stroke-linecap="round" />
-                  <path d="M6 19.5 H22" fill="none" stroke="#2b4357" stroke-width="1.6" stroke-linecap="round" />
-                  <circle cx="10" cy="8.5" r="2.1" fill="#0d141b" stroke="#7de6ff" stroke-width="1.4" />
-                  <path d="M16.2 8.5 h4.8" fill="none" stroke="#ff8a2e" stroke-width="1.8" stroke-linecap="round" />
-                  <path d="M18.6 6.2 v4.6" fill="none" stroke="#ff8a2e" stroke-width="1.8" stroke-linecap="round" />
-                </svg>
-              </div>
-              <div>
-                <h3>There is no clear record of how service breakdowns unfolded</h3>
-                <p>
-                  When something goes wrong, hotels often cannot easily see when the issue was reported, how quickly
-                  teams responded, or where the handoff failed.
-                </p>
-              </div>
+          <article class="hl-insight">
+            <div class="hl-insight__glyph" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 9h18M7 15h18M7 21h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <circle cx="11" cy="9" r="2" stroke="currentColor" stroke-width="1.5" />
+                <path d="M18 9h7M20 6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="hl-insight__body">
+              <h3>There is no clear record of how service breakdowns unfolded</h3>
+              <p>
+                When something goes wrong, hotels often cannot easily see when the issue was reported, how quickly teams
+                responded, or where the handoff failed.
+              </p>
             </div>
           </article>
 
-          <article class="memo-hotel-card memo-hotel-card--amber" role="listitem" tabindex="0">
-            <div class="memo-hotel-card__top">
-              <div class="memo-hotel-icon" aria-hidden="true">
-                <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                  <!-- Two gears + strike-through -->
-                  <circle cx="10.6" cy="10.8" r="4.2" fill="none" stroke="#7de6ff" stroke-width="1.7" />
-                  <circle cx="10.6" cy="10.8" r="1.9" fill="none" stroke="#2b4357" stroke-width="1.6" />
-                  <path
-                    d="M10.6 5.2 V3.7 M10.6 17.9 V16.4 M5 10.8 H3.5 M17.7 10.8 H16.2"
-                    fill="none"
-                    stroke="#7de6ff"
-                    stroke-width="1.7"
-                    stroke-linecap="round"
-                  />
-                  <path
-                    d="M6.6 6.9 L5.5 5.8 M15.7 15.8 L14.6 14.7 M14.6 6.9 L15.7 5.8 M5.5 15.8 L6.6 14.7"
-                    fill="none"
-                    stroke="#7de6ff"
-                    stroke-width="1.45"
-                    stroke-linecap="round"
-                  />
-
-                  <circle cx="17.2" cy="15.8" r="2.9" fill="none" stroke="#7de6ff" stroke-width="1.6" />
-                  <circle cx="17.2" cy="15.8" r="1.25" fill="none" stroke="#2b4357" stroke-width="1.4" />
-                  <path
-                    d="M17.2 12.7 V11.7 M17.2 20.0 V19.0 M14.1 15.8 H13.1 M21.3 15.8 H20.3"
-                    fill="none"
-                    stroke="#7de6ff"
-                    stroke-width="1.6"
-                    stroke-linecap="round"
-                  />
-
-                  <path d="M4.2 18.6 L20.6 4.6" fill="none" stroke="#ff8a2e" stroke-width="2" stroke-linecap="round" />
-                  <circle cx="12.6" cy="12.6" r="8.6" fill="none" stroke="#ff7a1a" stroke-opacity="0.16" stroke-width="1.2" />
-                </svg>
-              </div>
-              <div>
-                <h3>The same coordination problems keep repeating</h3>
-                <p>
-                  Delays in room readiness, housekeeping dispatch, engineering response, and guest-request follow-through
-                  can happen across every shift—but without visibility into communication patterns, those issues stay buried.
-                </p>
-              </div>
+          <article class="hl-insight">
+            <div class="hl-insight__glyph" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5" />
+                <circle cx="20" cy="18" r="3" stroke="currentColor" stroke-width="1.5" />
+                <path d="M6 24 24 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="hl-insight__body">
+              <h3>The same coordination problems keep repeating</h3>
+              <p>
+                Delays in room readiness, housekeeping dispatch, engineering response, and guest-request follow-through
+                can happen across every shift—but without visibility into communication patterns, those issues stay
+                buried.
+              </p>
             </div>
           </article>
 
-          <article class="memo-hotel-card" role="listitem" tabindex="0">
-            <div class="memo-hotel-card__top">
-              <div class="memo-hotel-icon" aria-hidden="true">
-                <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="9" y="6" width="10" height="16" rx="3" fill="none" stroke="#7de6ff" stroke-width="1.6" />
-                  <path d="M11 10.2 H17" fill="none" stroke="#2b4357" stroke-width="1.6" stroke-linecap="round" />
-                  <path d="M11 13.8 H17" fill="none" stroke="#2b4357" stroke-width="1.6" stroke-linecap="round" />
-                  <path d="M14 22.7 v2" fill="none" stroke="#15212f" stroke-width="1.2" opacity="0.9" />
-                  <path d="M19.8 9.4 C22 10.9 23.2 12.9 23.2 14.9 C23.2 16.9 22 18.9 19.8 20.4" fill="none" stroke="#ff8a2e" stroke-width="1.6" stroke-linecap="round" />
-                  <path d="M21.4 11.4 C22.3 12.4 22.8 13.6 22.8 14.9 C22.8 16.2 22.3 17.4 21.4 18.4" fill="none" stroke="#ff7a1a" stroke-width="1.6" stroke-linecap="round" />
-                  <circle cx="14" cy="18.4" r="1.2" fill="#23e072" />
-                </svg>
-              </div>
-              <div>
-                <h3>Hotel leaders are managing without visibility into frontline reality</h3>
-                <p>
-                  The radio is where operational truth lives, but most hotels have no way to capture, review, or learn
-                  from it at scale.
-                </p>
-              </div>
+          <article class="hl-insight">
+            <div class="hl-insight__glyph" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="7" width="12" height="18" rx="3" stroke="currentColor" stroke-width="1.5" />
+                <path d="M13 11h6M13 15h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path
+                  d="M22 10c2.5 1.5 4 4 4 6.5s-1.5 5-4 6.5"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  opacity="0.65"
+                />
+              </svg>
+            </div>
+            <div class="hl-insight__body">
+              <h3>Hotel leaders are managing without visibility into frontline reality</h3>
+              <p>
+                The radio is where operational truth lives, but most hotels have no way to capture, review, or learn from
+                it at scale.
+              </p>
             </div>
           </article>
         </div>
 
-        <p class="memo-hotel-cta-wrap">
-          <a class="memo-hotel-cta" href="#schedule-time-to-speak">Schedule a time to speak</a>
-        </p>
+        <footer class="hl-insights__foot">
+          <a class="hl-btn hl-btn--primary" href="#schedule-time-to-speak">Schedule a time to speak</a>
+        </footer>
       </section>
 
-      <!-- 3) Hotel-usecase-section copy -->
-      <section class="memo-svg-section memo-svg-section--usecase" aria-label="Hotel use cases">
-        <div class="memo-svg-card">
-          <div class="memo-svg-media memo-svg-media--usecase">
-            <object class="memo-svg-embed" data="./hotel-usecase-section.svg" type="image/svg+xml" aria-label="Where Memo drives clarity across hotel operations">
-              <img src="./hotel-usecase-section.svg" alt="" loading="lazy" decoding="async" />
-            </object>
+      <!-- 3) Clarity chapter: split rail + signal stream (cyan system; distinct silhouette vs. ruled insights list) -->
+      <section class="hl-section hl-clarity" aria-labelledby="clarity-title">
+        <div class="hl-clarity__stage">
+          <header class="hl-clarity__rail">
+            <p class="hl-clarity__eyebrow">Coverage</p>
+            <div class="hl-clarity__ingress" aria-hidden="true"></div>
+            <h2 id="clarity-title">Where Memo drives clarity across hotel operations</h2>
+            <p class="hl-clarity__lede">
+              Voice traffic carries the sequence. Memo makes it legible—searchable, attributable, improvable—without
+              another dashboard layer.
+            </p>
+            <figure class="hl-clarity__trace" aria-hidden="true">
+              <svg class="hl-clarity__trace-svg" viewBox="0 0 32 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="16" y1="8" x2="16" y2="232" stroke="currentColor" stroke-width="1" opacity="0.28" />
+                <circle cx="16" cy="28" r="3.5" fill="currentColor" opacity="0.5" />
+                <circle cx="16" cy="76" r="3.5" fill="currentColor" opacity="0.38" />
+                <circle cx="16" cy="124" r="3.5" fill="currentColor" opacity="0.38" />
+                <circle cx="16" cy="172" r="3.5" fill="currentColor" opacity="0.38" />
+                <circle cx="16" cy="208" r="3.5" fill="currentColor" opacity="0.38" />
+                <circle cx="16" cy="228" r="3.5" fill="currentColor" opacity="0.5" />
+              </svg>
+            </figure>
+          </header>
+
+          <div class="hl-clarity__stream">
+            <article class="hl-clarity__opus" aria-labelledby="clarity-opus-title">
+              <span class="hl-clarity__sigil">01</span>
+              <h3 id="clarity-opus-title">Reconstruct guest issues with clarity</h3>
+              <p>
+                When service fails or a guest complaint escalates, leadership sees when it was first called out, how it
+                was handed off, who responded, and where execution broke—not recall, but the record.
+              </p>
+            </article>
+
+            <ol class="hl-clarity__sequence" start="2">
+              <li class="hl-clarity__step">
+                <h3>Improve room-readiness coordination</h3>
+                <p>
+                  Room turns, rush cleans, inspected status, maintenance holds, and arrival prep—delays surface where
+                  they begin on the radio, not after the guest arrives.
+                </p>
+              </li>
+              <li class="hl-clarity__step">
+                <h3>Strengthen VIP and high-touch execution</h3>
+                <p>
+                  Arrivals, special requests, amenity delivery: trace the coordination behind moments where consistency
+                  is the product.
+                </p>
+              </li>
+              <li class="hl-clarity__step">
+                <h3>Surface maintenance response bottlenecks</h3>
+                <p>
+                  Follow how engineering work is reported, routed, and escalated—slow responses, brittle handoffs, and
+                  repeat property issues become visible.
+                </p>
+              </li>
+              <li class="hl-clarity__step">
+                <h3>Detect repeat breakdowns across shifts</h3>
+                <p>
+                  Recurring requests, issue types, and coordination gaps stop hiding in daily traffic before they
+                  calcify into cost.
+                </p>
+              </li>
+              <li class="hl-clarity__step">
+                <h3>Review security and incident communication</h3>
+                <p>
+                  Disturbances, access, medical events: a clearer thread of how incidents were communicated and
+                  escalated across teams.
+                </p>
+              </li>
+            </ol>
           </div>
         </div>
       </section>
 
-      <!-- 4) Hotel-workflow-fit copy -->
-      <section class="memo-svg-section memo-svg-section--workflow" aria-label="Hotel workflow fit">
-        <div class="memo-svg-card">
-          <div class="memo-svg-media memo-svg-media--workflow">
-            <object class="memo-svg-embed" data="./hotel-workflow-fit.svg" type="image/svg+xml" aria-label="Memo workflow adapts to hotel operations">
-              <img src="./hotel-workflow-fit.svg" alt="" loading="lazy" decoding="async" />
-            </object>
+      <!-- 4) Workflow fit: through-line (replaces hotel-workflow-fit.svg on this page) -->
+      <section class="hl-section hl-fit" aria-labelledby="fit-title">
+        <div class="hl-fit__shell">
+          <header class="hl-fit__intro">
+            <p class="hl-fit__eyebrow">Workflow fit</p>
+            <h2 id="fit-title">Memo adapts to your operations, not the other way around.</h2>
+            <p class="hl-fit__deck">
+              Teams keep using the radios they already rely on. Memo captures that flow and returns clarity—no new
+              choreography, no forced process theater.
+            </p>
+          </header>
+
+          <div class="hl-fit__canopy" aria-hidden="true">
+            <svg class="hl-fit__wave" viewBox="0 0 1120 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="hl-fit-line" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#1fe1ff" stop-opacity="0.5" />
+                  <stop offset="38%" stop-color="#7de6ff" stop-opacity="0.4" />
+                  <stop offset="48%" stop-color="#7de6ff" stop-opacity="0.36" />
+                  <stop offset="54%" stop-color="#c9a882" stop-opacity="0.34" />
+                  <stop offset="64%" stop-color="#ff8a2e" stop-opacity="0.33" />
+                  <stop offset="100%" stop-color="#ff8a2e" stop-opacity="0.32" />
+                </linearGradient>
+              </defs>
+              <path
+                class="hl-fit__wave-path"
+                pathLength="100"
+                d="M 32 78 C 168 28 268 118 400 72 C 532 26 632 112 760 68 C 888 24 968 98 1088 62"
+                stroke="url(#hl-fit-line)"
+                stroke-width="1.15"
+                fill="none"
+                stroke-linecap="round"
+              />
+              <circle class="hl-fit__node hl-fit__node--a" cx="118" cy="62" r="4" fill="#1fe1ff" opacity="0.55" />
+              <circle class="hl-fit__node hl-fit__node--b" cx="392" cy="74" r="4" fill="#7de6ff" opacity="0.5" />
+              <circle class="hl-fit__node hl-fit__node--c" cx="756" cy="70" r="4" fill="#7de6ff" opacity="0.42" />
+              <circle class="hl-fit__node hl-fit__node--d" cx="1040" cy="58" r="4" fill="#ff8a2e" opacity="0.42" />
+            </svg>
           </div>
+
+          <ol class="hl-fit__phases">
+            <li class="hl-fit__phase">
+              <span class="hl-fit__mark">01</span>
+              <h3>Teams coordinate in real time</h3>
+              <p>
+                Front desk, housekeeping, engineering, security, and guest services keep the same cadence—the channel
+                stays familiar.
+              </p>
+            </li>
+            <li class="hl-fit__phase">
+              <span class="hl-fit__mark">02</span>
+              <h3>Critical moments are captured</h3>
+              <p>
+                Complaints, rush turns, maintenance calls, VIP requests, and escalations land in the record as they
+                happen—not weeks later from memory.
+              </p>
+            </li>
+            <li class="hl-fit__phase">
+              <span class="hl-fit__mark">03</span>
+              <h3>Operational patterns surface</h3>
+              <p>
+                Repeat issues, delayed handoffs, and cross-shift gaps emerge from the traffic itself—without new forms
+                or daily logging rituals.
+              </p>
+            </li>
+            <li class="hl-fit__phase">
+              <span class="hl-fit__mark">04</span>
+              <h3>Leaders act with more clarity</h3>
+              <p>
+                Review what was said, where execution slipped, and coach the operation from a shared factual thread—not
+                a dashboard wallpaper.
+              </p>
+            </li>
+          </ol>
         </div>
       </section>
 
-      <!-- Anchor target for the existing CTA links -->
-      <section id="schedule-time-to-speak" class="memo-schedule" aria-label="Schedule a time to speak">
-        <div class="memo-schedule-inner">
-          <div class="memo-schedule-accent" aria-hidden="true"></div>
-          <h2 class="memo-schedule-title">Schedule a time to speak</h2>
-          <p class="memo-schedule-copy">
-            Memo turns radio traffic into measurable operational insight across hotel operations.
-          </p>
-          <a class="hero-cta memo-schedule-cta" href="#schedule-time-to-speak">Schedule a time to speak</a>
+      <!-- 5) Schedule anchor -->
+      <section id="schedule-time-to-speak" class="hl-section hl-close" aria-labelledby="schedule-title">
+        <div class="hl-close__inner">
+          <h2 id="schedule-title">Schedule a time to speak</h2>
+          <p>Memo turns radio traffic into measurable operational insight across hotel operations.</p>
+          <a class="hl-btn hl-btn--primary" href="#schedule-time-to-speak">Schedule a time to speak</a>
         </div>
       </section>
     </main>

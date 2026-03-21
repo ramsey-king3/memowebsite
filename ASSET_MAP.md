@@ -6,7 +6,7 @@ This documents moves and renames performed during the repo reorganization. Git h
 
 | Old path | New path | Notes |
 |----------|----------|--------|
-| `index.html` (full hotel page, `chore/repo-organization`) | [`hotel/hotel-page-sythesization.html`](hotel/hotel-page-sythesization.html) | Same markup and anchor CTAs; stylesheet and SVG paths updated. |
+| `index.html` (full hotel page, `chore/repo-organization`) | [`hotel/hotel-page-sythesization.html`](hotel/hotel-page-sythesization.html) | Hotel page uses [`hotel/hotel-landing.css`](hotel/hotel-landing.css) (isolated from `styles.css`); anchor CTAs and SVG paths remain under `hotel/`. |
 | `index.html` | [`index.html`](index.html) | Replaced with redirect + links (see [`archive/root-index-full-hotel-embed-chore-branch.html`](archive/root-index-full-hotel-embed-chore-branch.html) for the previous root file). |
 | `Hotel-usecase-section.svg` | [`hotel/hotel-usecase-section.svg`](hotel/hotel-usecase-section.svg) | Renamed for consistent `hotel-*` naming. |
 | `Hotel-workflow-fit.svg` | [`hotel/hotel-workflow-fit.svg`](hotel/hotel-workflow-fit.svg) | Renamed for consistent `hotel-*` naming. |
